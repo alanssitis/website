@@ -1,8 +1,14 @@
 <script>
+    const navItems = [
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: "Contact", href: "/contact" }
+        ];
 </script>
-
 <nav>
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/contact">Contact</a>
+    {#each navItems as {label, href}}
+        <a {href}>{label}</a>
+    {/each}
 </nav>
+<style>
+</style>
