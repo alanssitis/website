@@ -4,44 +4,44 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 export interface Props {
-    content: {
-        title: string;
-        description: string;
-        pubDate: string;
-        updatedDate?: string;
-    };
+  content: {
+    title: string;
+    description: string;
+    pubDate: string;
+    updatedDate?: string;
+  };
 }
 
 const {
-    content: { title, description, pubDate, updatedDate },
+  content: { title, description, pubDate, updatedDate },
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <BaseHead title={title} description={description} />
-    </head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-    <body>
-        <Header />
-        <div class="mx-32 my-2">
-            <main>
-                <article>
-                    <h1 class="text-2xl">{title}</h1>
-                    <time>{pubDate}</time>
-                    {
-                        updatedDate && (
-                            <div>
-                                Last updated on <time>{updatedDate}</time>
-                            </div>
-                        )
-                    }
-                    <hr class="m-4" />
-                    <slot />
-                </article>
-            </main>
-        </div>
-        <Footer />
-    </body>
+  <body>
+    <Header />
+    <div class="mx-32 my-20">
+      <main>
+        <article>
+          <h1 class="text-2xl">{title}</h1>
+          <time>{pubDate}</time>
+          {
+            updatedDate && (
+              <div>
+                Last updated on <time>{updatedDate}</time>
+              </div>
+            )
+          }
+          <hr class="m-4" />
+          <slot />
+        </article>
+      </main>
+    </div>
+    <Footer />
+  </body>
 </html>
