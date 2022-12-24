@@ -1,8 +1,6 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import Header from "../../components/Header.astro";
 import { BLOG_DESCRIPTION, BLOG_TITLE } from "../../config";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const posts = (await Astro.glob("./*.{md,mdx}")).sort(
   (a, b) =>
@@ -11,38 +9,24 @@ const posts = (await Astro.glob("./*.{md,mdx}")).sort(
 );
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={BLOG_TITLE} description={BLOG_DESCRIPTION} />
-  </head>
-
-  <body class="flex flex-col min-h-screen antialiased">
-    <Header />
-    <main class="flex-grow">
-      <p>blogs</p>
-      <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <time datetime={post.frontmatter.pubDate}>
-                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                    "en-us",
-                    {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    }
-                  )}
-                </time>
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
+  <p>blogs</p>
+  <section>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <time datetime={post.frontmatter.pubDate}>
+              {new Date(post.frontmatter.pubDate).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+            <a href={post.url}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

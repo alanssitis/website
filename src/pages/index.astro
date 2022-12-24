@@ -1,26 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-
-  <body class="flex flex-col min-h-screen antialiased">
-    <Header />
-    <main class="flex-grow">
-      <p>This is a WIP!!</p>
-      <h1>Hi There!!</h1>
-      <p>
-        My name is Alan and I am a student at Purdue University majoring in
-        Computer Engineering.
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <h1>Hi There!!</h1>
+  <p>
+    My name is Alan and I am a student at Purdue University majoring in Computer
+    Engineering.
+  </p>
+</BaseLayout>

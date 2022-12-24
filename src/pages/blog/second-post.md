@@ -1,9 +1,8 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: "First post"
+title: "Testy"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "11/27/2022"
-updatedDate: "12/24/2022"
+pubDate: "12/14/2022"
 ---
 
 # Hi there!
