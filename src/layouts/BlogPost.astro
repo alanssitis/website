@@ -27,15 +27,18 @@ const {
     <Header />
     <main class="flex-grow m-4 sm:mx-16 lg:mx-32 sm:my-10 lg:my-20">
       <article>
-        <time datetime={pubDate}>
-          {
-            new Date(pubDate).toLocaleDateString("en-us", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })
-          }
-        </time>
+        <div>
+          Published on
+          <time datetime={pubDate}>
+            {
+              new Date(pubDate).toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })
+            }
+          </time>
+        </div>
         {
           updatedDate && (
             <div>
@@ -51,8 +54,8 @@ const {
           )
         }
         <hr class="m-4" />
-        <div class="prose lg:prose-xl" >
-            <slot />
+        <div class="prose lg:prose-xl">
+          <slot />
         </div>
       </article>
     </main>
