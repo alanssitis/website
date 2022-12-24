@@ -25,9 +25,8 @@ const {
 
   <body class="flex flex-col min-h-screen antialiased">
     <Header />
-    <main class="flex-grow mx-32 my-20">
+    <main class="flex-grow m-4 sm:mx-16 lg:mx-32 sm:my-10 lg:my-20">
       <article>
-        <h1 class="text-2xl">{title}</h1>
         <time datetime={pubDate}>
           {
             new Date(pubDate).toLocaleDateString("en-us", {
@@ -52,7 +51,9 @@ const {
           )
         }
         <hr class="m-4" />
-        <slot />
+        <div class="prose lg:prose-xl" >
+            <slot />
+        </div>
       </article>
     </main>
     <Footer />
