@@ -40,7 +40,14 @@ const {
         {
           updatedDate && (
             <div>
-              Last updated on <time>{updatedDate}</time>
+              Last updated on
+              <time datetime={updatedDate}>
+                {new Date(updatedDate).toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </time>
             </div>
           )
         }
