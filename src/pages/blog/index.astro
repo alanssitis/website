@@ -1,7 +1,7 @@
 ---
-import BlogEntry from "../../components/BlogEntry.astro";
 import { BLOG_DESCRIPTION, BLOG_TITLE } from "../../config";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogEntry from "../../components/BlogEntry.astro";
 
 const posts = (await Astro.glob("./*.{md,mdx}")).sort(
   (a, b) =>

@@ -4,5 +4,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={PROJECTS_TITLE} description={PROJECTS_DESCRIPTION}>
-  <p>projects</p>
+  <p>Projects</p>
+  <p>
+    This page is still WIP, but you can see what I have been doing on <a
+      href="https://github.com/alanssitis">GitHub</a
+    >.
+  </p>
+  <p>
+    PS. I often do basic prototyping on a local machine and never upload it, but
+    I try to put some of the more interesting stuff on my GH!
+  </p>
 </BaseLayout>
+
+<style>
+  a {
+    @apply text-blue-800 no-underline hover:underline hover:text-blue-600;
+  }
+</style>
