@@ -7,7 +7,7 @@ const { pathname } = Astro.url;
 const isCurrent = href === pathname || href === pathname.replace(/\/$/, "");
 
 const defaultClass =
-  "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
+  "text-neutral-300 hover:bg-neutral-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium";
 ---
 
 <a
@@ -15,7 +15,7 @@ const defaultClass =
   class:list={[
     defaultClass,
     classValues,
-    { "bg-gray-900 text-white": isCurrent },
+    { "bg-neutral-900 text-white": isCurrent },
   ]}
   {...props}
 >
