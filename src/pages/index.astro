@@ -4,9 +4,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>Hi There!!</h1>
-  <p>
-    My name is Alan and I am a student at Purdue University majoring in Computer
-    Engineering.
-  </p>
+  <div class="grid gap-2 xl:gap-10 grid-cols-1 sm:grid-cols-2 m-2 2xl:mx-48">
+    <div class="sm:hidden px-10 pt-10">
+      <img class="rounded-2xl object-scale-down" src="/profile-square.jpg" />
+    </div>
+    <div class="flex flex-col justify-center">
+      <h1 class="sm:mx-12 lg:mx-20 my-8 text-4xl sm:text-5xl font-black">
+        Hi There!
+      </h1>
+      <p class="sm:mx-8 lg:mx-18 text-lg sm:text-xl">
+        My name is Alan and I am a student at Purdue University majoring in
+        Computer Engineering. 
+      </p>
+      <p class="sm:mx-8 lg:mx-18 my-4 text-lg sm:text-xl">
+        I am passionate about learning and will always take on an opportunity
+        to learn something new! I like to test out new technologies and love
+        to solve problems.
+      </p>
+    </div>
+    <img
+      class="hidden sm:block rounded-2xl object-scale-down"
+      src="/profile-vertical.jpg"
+    />
+  </div>
 </BaseLayout>
