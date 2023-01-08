@@ -1,12 +1,14 @@
 ---
 import { PROJECTS_DESCRIPTION, PROJECTS_TITLE } from "../config";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import '../styles/global.css'
 ---
 
 <BaseLayout title={PROJECTS_TITLE} description={PROJECTS_DESCRIPTION}>
   <p>Projects</p>
   <p>
     This page is still WIP, but you can see what I have been doing on <a
+      class="blue-link"
       href="https://github.com/alanssitis">GitHub</a
     >.
   </p>
@@ -15,9 +17,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     I try to put some of the more interesting stuff on my GH!
   </p>
 </BaseLayout>
-
-<style>
-  a {
-    @apply text-blue-800 no-underline hover:underline hover:text-blue-600;
-  }
-</style>
