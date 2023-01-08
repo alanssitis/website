@@ -11,13 +11,15 @@ const posts = (await Astro.glob("./*.{md,mdx}")).sort(
 ---
 
 <BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
-  <h1 class="sm:mx-24 lg:mx-40 py-10 text-5xl sm:text-7xl font-black">{BLOG_TITLE}</h1>
-  <p class="sm:mx-16 lg:mx-36 text-xl sm:text-2xl">
+  <h1 class="sm:mx-24 lg:mx-40 py-8 text-4xl sm:text-5xl font-black">
+    {BLOG_TITLE}
+  </h1>
+  <p class="sm:mx-16 lg:mx-36 text-lg sm:text-xl">
     I like to work on a wide variety of projects. If there is anything that is
     interesting and worth sharing, I will make a small write-up.
   </p>
   <section>
-    <ul class="mt-8 sm:mt-16">
+    <ul class="mt-6 sm:mt-12">
       {
         posts.map((post) => (
           <li>
