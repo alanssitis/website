@@ -5,28 +5,30 @@ import ProjectEntry from "../components/ProjectEntry.astro";
 ---
 
 <BaseLayout title={PROJECTS_TITLE} description={PROJECTS_DESCRIPTION}>
-  <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
-    {PROJECTS_TITLE}
-  </h1>
-  <p class="text-lg sm:mx-16 sm:text-xl lg:mx-36">
-    This page is still WIP, but you can see what I have been doing on <a
-      class="blue-link"
-      href="https://github.com/alanssitis">GitHub</a
-    >.
-    <br />
-    PS. I often do basic prototyping on a local machine and never upload it, but
-    I try to put some of the more interesting stuff on my GH!
-  </p>
+  <div class="m-4 sm:mx-16 sm:my-10 lg:mx-32 lg:my-20">
+    <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
+      {PROJECTS_TITLE}
+    </h1>
+    <p class="text-lg sm:mx-16 sm:text-xl lg:mx-36">
+      This page is still WIP, but you can see what I have been doing on <a
+        class="blue-link"
+        href="https://github.com/alanssitis">GitHub</a
+      >.
+      <br />
+      PS. I often do basic prototyping on a local machine and never upload it, but
+      I try to put some of the more interesting stuff on my GH!
+    </p>
 
-  <section>
-    <ul class="mt-6 sm:mt-12">
-      <li>
-        <ProjectEntry
-          title="achungma.me"
-          description="Astro static website hosted on Vercel."
-          url="https://github.com/alanssitis/website"
-        />
-      </li>
-    </ul>
-  </section>
+    <section>
+      <ul class="mt-6 sm:mt-12">
+        <li>
+          <ProjectEntry
+            title="achungma.me"
+            description="Astro static website hosted on Vercel."
+            url="https://github.com/alanssitis/website"
+          />
+        </li>
+      </ul>
+    </section>
+  </div>
 </BaseLayout>

@@ -4,33 +4,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="m-2 grid grid-cols-1 gap-2 sm:grid-cols-2 xl:gap-10 2xl:mx-48">
-    <div class="px-10 pt-10 sm:hidden">
+  <div
+    class="m-6 grid grid-cols-1 gap-2 sm:mx-16 sm:my-12 md:grid-cols-2 lg:mx-32 lg:my-20 xl:gap-10 2xl:mx-80"
+  >
+    <div class="px-10 pt-10 md:hidden">
       <img class="rounded-2xl object-scale-down" src="/profile-square.jpg" />
     </div>
     <div class="flex flex-col justify-center">
-      <h1 class="my-8 text-4xl font-black sm:mx-12 sm:text-5xl lg:mx-20">
+      <h1 class="my-8 text-4xl font-black sm:mx-12 sm:text-5xl lg:mx-16">
         Hi There!
       </h1>
       <p class="lg:mx-18 mb-2 text-lg sm:mx-8 sm:text-xl">
         My name is Alan and I am a student at Purdue University majoring in
-        Computer Engineering graduating in Fall of 2023.
+        Computer Engineering graduating in Fall 2023.
       </p>
       <p class="lg:mx-18 my-2 text-lg sm:mx-8 sm:text-xl">
-        I am passionate about software systems and security. I have involved
-        myself in various software supply chain security projects by
-        contributing to their efforts directly. I am currently taking the
-        Operating Systems Engineering (ECE 469) course and I am thoroughly
-        enjoying it!
+        I am passionate about computer systems and security and have contributed
+        to various open source software supply chain security projects.
       </p>
       <p class="lg:mx-18 my-2 text-lg sm:mx-8 sm:text-xl">
-        I love to learn and always seek for opportunities to learn something
-        new! I have fun dabbling with different programming languages and
-        messing with embedded systems.
+        I love to learn and always seek for opportunities to learn!
       </p>
     </div>
     <img
-      class="hidden rounded-2xl object-scale-down sm:block"
+      class="hidden rounded-2xl object-scale-down md:block"
       src="/profile-vertical.jpg"
     />
   </div>
