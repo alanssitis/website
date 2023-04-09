@@ -1,19 +1,32 @@
 ---
 import { PROJECTS_DESCRIPTION, PROJECTS_TITLE } from "../config";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "../styles/global.css";
+import ProjectEntry from "../components/ProjectEntry.astro";
 ---
 
 <BaseLayout title={PROJECTS_TITLE} description={PROJECTS_DESCRIPTION}>
-  <p>Projects</p>
-  <p>
+  <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
+    {PROJECTS_TITLE}
+  </h1>
+  <p class="text-lg sm:mx-16 sm:text-xl lg:mx-36">
     This page is still WIP, but you can see what I have been doing on <a
       class="blue-link"
       href="https://github.com/alanssitis">GitHub</a
     >.
-  </p>
-  <p>
+    <br />
     PS. I often do basic prototyping on a local machine and never upload it, but
     I try to put some of the more interesting stuff on my GH!
   </p>
+
+  <section>
+    <ul class="mt-6 sm:mt-12">
+      <li>
+        <ProjectEntry
+          title="achungma.me"
+          description="Astro static website hosted on Vercel."
+          url="https://github.com/alanssitis/website"
+        />
+      </li>
+    </ul>
+  </section>
 </BaseLayout>

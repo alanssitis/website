@@ -11,10 +11,10 @@ const posts = (await Astro.glob("./*.{md,mdx}")).sort(
 ---
 
 <BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
-  <h1 class="sm:mx-24 lg:mx-40 py-8 text-4xl sm:text-5xl font-black">
+  <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
     {BLOG_TITLE}
   </h1>
-  <p class="sm:mx-16 lg:mx-36 text-lg sm:text-xl">
+  <p class="text-lg sm:mx-16 sm:text-xl lg:mx-36">
     I like to work on a wide variety of projects. If there is anything that is
     interesting and worth sharing, I will make a small write-up.
   </p>

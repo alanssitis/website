@@ -17,7 +17,7 @@ import HeaderLink from "./HeaderLink.astro";
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              class="h-6 w-6 block"
+              class="block h-6 w-6"
               id="menu-button-open"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -32,7 +32,7 @@ import HeaderLink from "./HeaderLink.astro";
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
             </svg>
             <svg
-              class="h-6 w-6 hidden"
+              class="hidden h-6 w-6"
               id="menu-button-close"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -63,7 +63,7 @@ import HeaderLink from "./HeaderLink.astro";
         <!-- RHS of navbar -->
       </div>
     </div>
-    <div class="sm:hidden hidden" id="mobile-menu">
+    <div class="hidden sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <HeaderLink href="/" class="block text-base">Home</HeaderLink>
         <HeaderLink href="/blog" class="block text-base">Blog</HeaderLink>
