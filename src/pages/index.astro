@@ -1,6 +1,9 @@
 ---
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SemesterEntry from "../components/SemesterEntry.astro";
+import { Semesters } from "../classes";
+import "../styles/global.css";
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -30,5 +33,77 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       class="hidden rounded-2xl object-scale-down md:block"
       src="/profile-vertical.jpg"
     />
+  </div>
+
+  <!-- Experience -->
+  <div class="bg-neutral-600 text-neutral-100">
+    <div class="mx-6 py-6 sm:mx-16 sm:py-12 lg:mx-32 lg:py-20 2xl:mx-80">
+      <h1 class="mb-2 text-4xl font-extrabold sm:mb-6 sm:px-10 md:mb-10">
+        More About Me
+      </h1>
+      <p class="text-lg sm:text-xl">
+        I work under <a
+          class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
+          href="https://badhomb.re/">Prof. Santiago Torres-Arias</a
+        >
+        on a number of research projects. Namely, I have contributed extensively
+        to the
+        <a
+          class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
+          href="https://in-toto.io/">in-toto</a
+        > project and have previously worked on some <a
+          class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
+          href="https://www.sigstore.dev/">sigstore</a
+        > bits that run on the Purdue side. I am also involved in the talks for a
+        new project called SBOMit (a specification that combines SBOMs with in-toto
+        metadata for verification) and plan to help implement it.
+      </p>
+      <p class="mt-6 text-lg sm:text-xl">
+        I am also the software lead of <a
+          class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
+          href="https://github.com/Autonomous-Motorsports-Purdue/"
+          >Autonomous Motorsports Purdue,</a
+        >
+        where I lead and mentor a small team of CS and ECE undergraduate students
+        to build the software stack for our autonomous kart. This year the club will
+        be hosting the inaugural race for the <a
+          class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
+          href="https://autonomouskartingseries.com/"
+          >Autonomous Karting Series.</a
+        >
+      </p>
+      <p class="mt-6 text-lg sm:text-xl">
+        I hail from Cd. Juarez, Mexico, and my favorite food is tacos de lengua.
+        Outside of reading and coding, I love to cook and bake on my free time
+        (which I very much inherited from my mom). I enjoy the outdoors and I
+        bike around when it's not horrible outside!
+      </p>
+    </div>
+  </div>
+
+  <!-- Classes -->
+  <div class="bg-neutral-200">
+    <div class="mx-6 py-6 sm:mx-16 sm:py-12 lg:mx-32 lg:py-20 2xl:mx-80">
+      <h1 class="mb-2 text-4xl font-extrabold sm:mb-6 sm:px-10 md:mb-10">
+        Classes Taken
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        {
+          Semesters.map((s) => (
+            <SemesterEntry semester={s.sem}>
+              <ul>
+                {s.classes.map((c) => (
+                  <li>
+                    <a class="blue-link" href={c.link}>
+                      {c.name} <b>{c.description}</b>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </SemesterEntry>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </BaseLayout>

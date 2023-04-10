@@ -1,0 +1,14 @@
+---
+export interface Props {
+  semester: string;
+}
+
+const { semester } = Astro.props;
+---
+
+<div class="m-3 rounded-md border-2 border-neutral-300 p-4">
+  <h1 class="mb-2 text-xl font-semibold">{semester}</h1>
+  <slot>
+    <p>This is todo</p>
+  </slot>
+</div>
