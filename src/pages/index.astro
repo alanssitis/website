@@ -94,7 +94,10 @@ import "../styles/global.css";
               <ul>
                 {s.classes.map((c) => (
                   <li>
-                    <a class="blue-link" href={c.link}>
+                    <a
+                      class="text-blue-800 no-underline hover:text-blue-600 hover:underline"
+                      href={c.link}
+                    >
                       {c.name} <b>{c.description}</b>
                     </a>
                   </li>
