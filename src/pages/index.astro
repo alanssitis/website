@@ -2,7 +2,7 @@
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SemesterEntry from "../components/SemesterEntry.astro";
-import { Semesters } from "../classes";
+import { SemesterArray } from "../classes";
 import "../styles/global.css";
 ---
 
@@ -89,7 +89,7 @@ import "../styles/global.css";
       </h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {
-          Semesters.map((s) => (
+          SemesterArray.map((s) => (
             <SemesterEntry semester={s.sem}>
               <ul>
                 {s.classes.map((c) => (

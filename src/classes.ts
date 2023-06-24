@@ -1,4 +1,4 @@
-export const Semesters = [
+export const SemesterArray = [
   {
     sem: "Fall 2020",
     classes: [
