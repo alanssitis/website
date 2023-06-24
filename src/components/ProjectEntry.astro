@@ -5,12 +5,12 @@ export interface Props {
   url: string;
 }
 
-const { pubDate, title, description, url } = Astro.props;
+const { title, description, url } = Astro.props;
 ---
 
 <a
   href={url}
-  class="my-10 block rounded-xl border-2 px-8 py-4 hover:border-neutral-300 hover:bg-neutral-50 sm:mx-12 sm:px-16 sm:py-6 lg:mx-48"
+  class="hover:bg-neutral-50sm:px-16 block rounded-xl border-2 px-8 py-4 hover:border-neutral-300 sm:py-6"
 >
   <h2 class="text-xl font-semibold sm:text-2xl">{title}</h2>
   <p class="pt-2 text-lg sm:text-xl">{description}</p>
