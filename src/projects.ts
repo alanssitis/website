@@ -7,18 +7,20 @@ export const ProjectArray = [
     url: "https://github.com/Autonomous-Motorsports-Purdue/AMP_ASSV3/",
   },
   {
-    title: "in-toto ITE-4 Generic Artifact Resolver Implementation",
-    description:
-      "Helped implement ITE-4 (generic artifact URI support) to in-toto's \
-      Python implementation. Aditya Sirish and Lukas Pühringer helped finishing it.",
-    url: "https://github.com/in-toto/in-toto/pull/584",
-  },
-  {
     title: "Purdue eCTF Efforts",
     description:
       "Ported the lightweight crypto library Ascon to the target device (TI \
       TM4C123GH6PM) and implemented the PRNG.",
     url: "https://ectf.mitre.org/wp-content/uploads/2023/04/2023_eCTF_Purdue_Poster.pdf",
+  },
+  {
+    title: "Security Games",
+    description:
+      "Course project for the Probabilistic Methods course. It is a summary on \
+    interdependent security games. I wanted to do a project which covered the \
+    intersection of the two classes I was taking at the time, Game Theory and \
+    Probability.",
+    url: "https://github.com/alanssitis/security-games",
   },
   {
     title: "ITE-2 Demo",
@@ -34,6 +36,13 @@ export const ProjectArray = [
       "Demo for the in-toto project shown in KubeCon NA 2022. It demonstrates \
     an example implementation of ITE 4 and possible use cases.",
     url: "https://github.com/in-toto/ite-4-demo",
+  },
+  {
+    title: "in-toto ITE-4 Generic Artifact Resolver Implementation",
+    description:
+      "Helped implement ITE-4 (generic artifact URI support) to in-toto's \
+      Python implementation. Aditya Sirish and Lukas Pühringer helped finishing it.",
+    url: "https://github.com/in-toto/in-toto/pull/584",
   },
   {
     title: "Micro C Compiler",
