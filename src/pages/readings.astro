@@ -1,0 +1,23 @@
+---
+import { READINGS_DESCRIPTION, READINGS_TITLE } from "../config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectEntry from "../components/ProjectEntry.astro";
+import { ProjectArray } from "../projects";
+---
+
+<BaseLayout title={READINGS_TITLE} description={READINGS_DESCRIPTION}>
+  <div class="m-4 sm:mx-16 sm:my-10 lg:mx-32 lg:my-20">
+    <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
+      {READINGS_TITLE}
+    </h1>
+    <p class="text-lg sm:mx-16 sm:text-xl lg:mx-36">
+      I am trying to get better at finishing books, so here is a reading list
+      with my progress to keep myself accountable. These do not contain books I
+      have read in the past.
+    </p>
+
+    <section>
+      <!-- TODO -->
+    </section>
+  </div>
+</BaseLayout>

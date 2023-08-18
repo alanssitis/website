@@ -54,8 +54,8 @@ import HeaderLink from "./HeaderLink.astro";
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <HeaderLink href="/" class="">Home</HeaderLink>
-              <HeaderLink href="/blog">Blog</HeaderLink>
               <HeaderLink href="/projects">Projects</HeaderLink>
+              <HeaderLink href="/readings">Readings</HeaderLink>
               <HeaderLink href="/resume.pdf">Resume</HeaderLink>
               <HeaderLink href="https://github.com/alanssitis/"
                 >GitHub</HeaderLink
@@ -69,9 +69,11 @@ import HeaderLink from "./HeaderLink.astro";
     <div class="hidden sm:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <HeaderLink href="/" class="block text-base">Home</HeaderLink>
-        <HeaderLink href="/blog" class="block text-base">Blog</HeaderLink>
         <HeaderLink href="/projects" class="block text-base"
           >Projects</HeaderLink
+        >
+        <HeaderLink href="/readings" class="block text-base"
+          >Readings</HeaderLink
         >
         <HeaderLink href="/resume.pdf" class="block text-base"
           >Resume</HeaderLink
