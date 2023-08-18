@@ -229,8 +229,8 @@ export const SemesterArray = [
       },
       {
         name: "ECE 69500",
-        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=805&show=true&type=grad",
-        description: "Holistic Software Security",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=833&show=true&type=grad",
+        description: "Hardware & Software Security",
       },
     ],
   },
