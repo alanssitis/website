@@ -205,7 +205,7 @@ export const SemesterArray = [
     ],
   },
   {
-    sem: "Fall 2023 [TENTATIVE]",
+    sem: "Fall 2023",
     classes: [
       {
         name: "ECE 49401",
@@ -221,11 +221,6 @@ export const SemesterArray = [
         name: "ECE 51220",
         link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=695&show=true&type=undergrad",
         description: "Applied Algorithms",
-      },
-      {
-        name: "ECE 57000",
-        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=71&show=true&type=undergrad",
-        description: "Artificial Intelligence",
       },
       {
         name: "ECE 69500",
