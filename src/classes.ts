@@ -59,7 +59,7 @@ export const SemesterArray = [
     classes: [
       {
         name: "ECE 26400",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=13&coid=126856",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=591&show=true&type=undergrad",
         description: "Advanced C Programming",
       },
       {
@@ -74,27 +74,27 @@ export const SemesterArray = [
     classes: [
       {
         name: "ECE 20001",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142869",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=716&show=true&type=undergrad",
         description: "Circuits 1",
       },
       {
         name: "ECE 20007",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142871",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=726&show=true&type=undergrad",
         description: "Circuits Lab 1",
       },
       {
         name: "ECE 20875",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142924",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=729&show=true&type=undergrad",
         description: "Python for Data Science",
       },
       {
         name: "ECE 29401",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142865",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=724&show=true&type=undergrad",
         description: "Sophomore Seminar",
       },
       {
         name: "ECE 36800",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142815",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=542&show=true&type=undergrad",
         description: "Data Structures",
       },
       {
@@ -114,17 +114,17 @@ export const SemesterArray = [
       },
       {
         name: "ECE 20002",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=142870",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=725&show=true&type=undergrad",
         description: "Circuits 2",
       },
       {
         name: "ECE 27000",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=136213",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=607&show=true&type=undergrad",
         description: "Digital System Design",
       },
       {
         name: "ECE 40400",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=14&coid=136248",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=515&show=true&type=undergrad",
         description: "Computer Security",
       },
       {
@@ -139,27 +139,27 @@ export const SemesterArray = [
     classes: [
       {
         name: "CS 314",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=156589",
+        link: "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs314.html",
         description: "Numerical Methods",
       },
       {
         name: "ECE 30100",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=154116",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=33&show=true&type=undergrad",
         description: "Signals and Systems",
       },
       {
         name: "ECE 36200",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=160696",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=612&show=true&type=undergrad",
         description: "Microprocessor Systems and Interfacing",
       },
       {
         name: "ECE 39401",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=160718",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=704&show=true&type=undergrad",
         description: "Junior Seminar",
       },
       {
         name: "ECE 57300",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=158761",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=441&show=true&type=undergrad",
         description: "Compilers and Translator Writing Systems",
       },
     ],
@@ -169,22 +169,22 @@ export const SemesterArray = [
     classes: [
       {
         name: "ECE 30200",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=154117",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=34&show=true&type=undergrad",
         description: "Probabilistic Methods",
       },
       {
         name: "ECE 36900",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=154129",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=47&show=true&type=undergrad",
         description: "Discrete Mathematics",
       },
       {
         name: "ECE 46900",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=154166",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=56&show=true&type=undergrad",
         description: "OS Engineering",
       },
       {
         name: "ECE 49595",
-        link: "https://catalog.purdue.edu/preview_course.php?catoid=15&coid=154173",
+        link: "https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=824&show=true&type=undergrad",
         description: "Game Theory",
       },
       {

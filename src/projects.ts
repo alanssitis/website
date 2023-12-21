@@ -1,5 +1,11 @@
 export const ProjectArray = [
   {
+    title: "Puck-It: Smart Air Hockey Table",
+    description:
+      "Senior design project where we built a smart air-hockey table. It won first place in Spark challenge for the best senior design project in the ECE deparment.",
+    url: "https://www.puck-it.com/",
+  },
+  {
     title: "Autonomous Kart Software Stack",
     description:
       "Built v3 of AMP's (Autonomous Motorsports Purdue) Autonomous Software \
