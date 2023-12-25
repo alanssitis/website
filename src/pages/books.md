@@ -20,3 +20,4 @@ Here is a brief reading list of books I am currently reading or plan to read. I 
 A few books I would like to read eventually.
 
 - _Sapiens_ by Y. N. Harari
+- _Securing the Software Supply Chain_ by Michael Lieberman & Brandon Lum
