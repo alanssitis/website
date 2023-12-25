@@ -6,6 +6,11 @@ export const ProjectArray = [
     url: "https://www.puck-it.com/",
   },
   {
+    title: "SSL Stack Detection",
+    description: "Preliminary work to see whether you can use ciphersuite performance to determine and classify the SSL stack of the client.",
+    url: "https://github.com/alanssitis/ssl-stack-detection",
+  },
+  {
     title: "Autonomous Kart Software Stack",
     description:
       "Built v3 of AMP's (Autonomous Motorsports Purdue) Autonomous Software \
