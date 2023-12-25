@@ -8,7 +8,7 @@ import "../styles/global.css";
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div
-    class="m-6 grid grid-cols-1 gap-2 sm:mx-16 sm:my-12 md:grid-cols-2 lg:mx-32 lg:my-20 xl:gap-10 2xl:mx-80"
+    class="m-6 grid grid-cols-1 gap-2 sm:mx-16 sm:my-12 md:mx-auto md:max-w-7xl md:grid-cols-2 md:px-5 lg:my-20 xl:gap-10"
   >
     <div class="px-10 pt-10 md:hidden">
       <img class="rounded-2xl object-scale-down" src="/profile-square.jpg" />
@@ -18,7 +18,7 @@ import "../styles/global.css";
         Hi There!
       </h1>
       <p class="lg:mx-18 mb-2 text-lg sm:mx-8 sm:text-xl">
-        My name is Alan, and I am a software engineer working in PKI and
+        My name is Alan, and I am a software engineer working on PKI and
         software supply chain security. I will be joining Keytos in January
         2024.
       </p>
@@ -38,15 +38,19 @@ import "../styles/global.css";
         engineer!
       </p>
     </div>
-    <img
-      class="hidden rounded-2xl object-scale-down md:block"
-      src="/profile-vertical.jpg"
-    />
+    <div class="hidden h-full content-center object-scale-down md:flex">
+      <img class="rounded-2xl object-contain" src="/profile-vertical.jpg" />
+    </div>
   </div>
 
   <!-- Experience -->
-  <div class="bg-neutral-600 text-neutral-100">
-    <div class="mx-6 py-6 sm:mx-16 sm:py-12 lg:mx-32 lg:py-20 2xl:mx-80">
+  <div class="flex flex-col bg-neutral-600 text-neutral-100 md:flex-row">
+    <div class="md:w-2/5">
+      <img class="h-full object-cover" src="/pics.jpg" />
+    </div>
+    <div
+      class="mx-6 py-6 sm:px-16 sm:py-12 md:pl-20 md:mr-auto md:max-w-4xl md:grid-cols-2 lg:pl-28 lg:py-20"
+    >
       <h1 class="mb-2 text-4xl font-extrabold sm:mb-6 sm:px-10 md:mb-10">
         More About Me
       </h1>
@@ -54,8 +58,8 @@ import "../styles/global.css";
         I worked under <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://badhomb.re/">Prof. Santiago Torres-Arias</a
-        >on several research projects, mainly in software supply chain security.
-        Namely, I contribute to the<a
+        > on several research projects, mainly in software supply chain security.
+        Namely, I contribute to the <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://in-toto.io/">in-toto</a
         > project and have previously worked on some <a
@@ -64,7 +68,7 @@ import "../styles/global.css";
         > and <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://theupdateframework.io/">TUF</a
-        > bits. I am also involved in a new project called<a
+        > bits. I am also involved in a new project called <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://sbomit.dev/">SBOMit</a
         >. I strongly believe in the above projects' missions and deeply believe
@@ -81,8 +85,8 @@ import "../styles/global.css";
         I was the Co-President of <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://github.com/Autonomous-Motorsports-Purdue/"
-          >Autonomous Motorsports Purdue,</a
-        >where I led and mentored a team of undergraduate students passionate
+          >Autonomous Motorsports Purdue</a
+        >, where I led and mentored a team of undergraduate students passionate
         about robotics to build an autonomous kart. In Spring 2023, the club
         hosted the inaugural race for the <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
@@ -94,21 +98,21 @@ import "../styles/global.css";
         I hail from Mexico, and my favorite food is tacos de lengua. I love to
         meet new people and unapologetically enjoy going out. When I am not
         reading or coding, I love to cook and bake in my free time (which I very
-        much picked up from my mom). I have also taken up<a
+        much picked up from my mom). I have also taken up <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://www.instagram.com/alancm.pics/">photography</a
         > as a hobby. I enjoy the outdoors and bike around when it's not so horrible
         outside!
       </p>
       <p class="mt-6 text-lg sm:text-xl">
-        I am also a passionate<a
+        I am also a passionate <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://purduesports.com/sports/2018/5/17/trads-what-is-boilermaker-html"
           >Boilermaker</a
-        >, where my<a
+        >, where my <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
           href="https://purduesports.com/">boilermakers</a
-        >have been breaking my heart circa 2020.
+        > have been breaking my heart circa 2020.
       </p>
     </div>
   </div>

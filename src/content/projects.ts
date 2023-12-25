@@ -7,7 +7,8 @@ export const ProjectArray = [
   },
   {
     title: "SSL Stack Detection",
-    description: "Preliminary work to see whether you can use ciphersuite performance to determine and classify the SSL stack of the client.",
+    description:
+      "Preliminary work to see whether you can use ciphersuite performance to determine and classify the SSL stack of the client.",
     url: "https://github.com/alanssitis/ssl-stack-detection",
   },
   {
