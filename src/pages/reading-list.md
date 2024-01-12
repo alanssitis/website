@@ -1,6 +1,6 @@
 ---
-layout: ../layouts/BooksLayout.astro
-title: Books
+layout: ../layouts/ReadingListLayout.astro
+title: Reading List
 description: Alan Chung Ma's reading list.
 ---
 
