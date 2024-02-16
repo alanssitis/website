@@ -2,13 +2,13 @@ export const ProjectArray = [
   {
     title: "Puck-It: Smart Air Hockey Table",
     description:
-      "Senior design project where we built a smart air-hockey table. It won first place in Spark challenge for the best senior design project in the ECE deparment.",
+      "Senior design project where we built a smart air-hockey table. It won first place in the Spark challenge for the best senior design project in ECE.",
     url: "https://www.puck-it.com/",
   },
   {
     title: "SSL Stack Detection",
     description:
-      "Preliminary work to see whether you can use ciphersuite performance to determine and classify the SSL stack of the client.",
+      "Preliminary work to see whether you can use ciphersuite performance as a side channel to determine and classify the client's SSL stack.",
     url: "https://github.com/alanssitis/ssl-stack-detection",
   },
   {
@@ -22,16 +22,13 @@ export const ProjectArray = [
     title: "Purdue eCTF Efforts",
     description:
       "Ported the lightweight crypto library Ascon to the target device (TI \
-      TM4C123GH6PM) and implemented the PRNG.",
+      TM4C123GH6PM) and implemented the PRNG. Was not very good, but was a learning experience.",
     url: "https://ectf.mitre.org/wp-content/uploads/2023/04/2023_eCTF_Purdue_Poster.pdf",
   },
   {
     title: "Security Games",
     description:
-      "Course project for the Probabilistic Methods course. It is a summary on \
-    interdependent security games. I wanted to do a project which covered the \
-    intersection of the two classes I was taking at the time, Game Theory and \
-    Probability.",
+      "The course project for the Probabilistic Methods course is a summary of interdependent security games. I wanted to do a project covering the intersection of the two classes I was taking at the time, Game Theory and Probability.",
     url: "https://github.com/alanssitis/security-games",
   },
   {
@@ -63,8 +60,8 @@ export const ProjectArray = [
     url: "https://github.com/alanssitis/course-compiler-project",
   },
   {
-    title: "achungma.me",
-    description: "Astro static website hosted on Vercel.",
+    title: "alanchungma.com",
+    description: "Astro static website hosted on Vercel. (This site!)",
     url: "https://github.com/alanssitis/website",
   },
   {
