@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/ReadingListLayout.astro
+layout: ../layouts/MdBaseLayout.astro
 title: Reading List
 description: Alan Chung Ma's reading list.
 ---
