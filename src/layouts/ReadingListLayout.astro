@@ -4,7 +4,7 @@ import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+<BaseLayout title={"Alan Chung Ma - " + frontmatter.title} description={frontmatter.description}>
   <div class="m-4 sm:mx-16 sm:my-10 lg:mx-32 lg:my-20">
     <h1 class="py-8 text-4xl font-black sm:mx-24 sm:text-5xl lg:mx-40">
       {frontmatter.title}

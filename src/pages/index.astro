@@ -1,12 +1,9 @@
 ---
-import { SITE_DESCRIPTION, SITE_TITLE } from "../content/config";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SemesterEntry from "../components/SemesterEntry.astro";
-import { SemesterArray } from "../content/classes";
 import "../styles/global.css";
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title="Alan Chung Ma" description="Home page for Alan Chung Ma.">
   <div
     class="m-6 grid grid-cols-1 gap-2 sm:mx-16 sm:my-12 md:mx-auto md:max-w-7xl md:grid-cols-2 md:px-5 lg:my-20 xl:gap-10"
   >
@@ -51,9 +48,6 @@ import "../styles/global.css";
     <div
       class="mx-6 py-6 sm:px-16 sm:py-12 md:mr-auto md:max-w-4xl md:grid-cols-2 md:pl-20 lg:py-20 lg:pl-28"
     >
-      <h1 class="mb-2 text-4xl font-extrabold sm:mb-6 sm:px-10 md:mb-10">
-        More About Me
-      </h1>
       <p class="mt-6 text-lg sm:text-xl">
         I worked under <a
           class="text-blue-300 no-underline hover:text-blue-200 hover:underline"
@@ -107,35 +101,6 @@ import "../styles/global.css";
           href="https://purduesports.com/">boilermakers</a
         > have been breaking my heart since 2020.
       </p>
-    </div>
-  </div>
-
-  <!-- Classes -->
-  <div class="bg-neutral-200">
-    <div class="mx-6 py-6 sm:mx-16 sm:py-12 lg:mx-32 lg:py-20 2xl:mx-80">
-      <h1 class="mb-2 text-4xl font-extrabold sm:mb-6 sm:px-10 md:mb-10">
-        Courses Taken
-      </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        {
-          SemesterArray.map((s) => (
-            <SemesterEntry semester={s.sem}>
-              <ul>
-                {s.classes.map((c) => (
-                  <li>
-                    <a
-                      class="text-blue-800 no-underline hover:text-blue-600 hover:underline"
-                      href={c.link}
-                    >
-                      {c.name} <b>{c.description}</b>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </SemesterEntry>
-          ))
-        }
-      </div>
     </div>
   </div>
 </BaseLayout>
