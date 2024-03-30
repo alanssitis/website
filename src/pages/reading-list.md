@@ -8,8 +8,8 @@ Here is a brief reading list of books I am currently reading or plan to read. I 
 
 | Book                                                                                             | Author                       | Progress      |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------- |
-| [Homo Deus: A Brief History of Tomorrow](https://www.ynharari.com/book/homo-deus/)               | Yuval Noah Harari            | ~30%          |
-| [Site Reliability Engineering](https://a.co/d/fc9seC1)                                           | Beyer, Jones, Petoff, Murphy | <5%           |
+| [Homo Deus: A Brief History of Tomorrow](https://www.ynharari.com/book/homo-deus/)               | Yuval Noah Harari            | ~40%          |
+| [Site Reliability Engineering](https://a.co/d/fc9seC1)                                           | Beyer, Jones, Petoff, Murphy | ~10%          |
 | [Zero To Production In Rust](https://www.zero2prod.com/)                                         | Luca Palmieri                | ~20%          |
 | [A Graduate Course in Applied Cryptography](http://toc.cryptobook.us/book.pdf)                   | Dan Boneh & Victor Shoup     | <1%           |
 | [The Republic of Plato](https://www.amazon.com/dp/B01IMZ5HCU)                                    | Allan Bloom                  | <1%           |
