@@ -1,0 +1,46 @@
+---
+import BasePage from "../layouts/BasePage.astro";
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import { SITE_TITLE } from "../consts";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
+  Astro.props;
+---
+
+<BasePage title=`${title} | ${ SITE_TITLE }` description={description}>
+  <article>
+    <div class="mb-4">
+      {
+        heroImage && (
+          <img
+            class="w-full rounded-md object-scale-down object-center shadow-md shadow-slate-400 dark:shadow-slate-600"
+            src={heroImage}
+            alt={heroImageAlt}
+          />
+        )
+      }
+    </div>
+    <div class="my-6">
+      <div>
+        <div class="italic">
+          <FormattedDate date={pubDate} />
+          {
+            updatedDate && (
+              <div>
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )
+          }
+        </div>
+        <h1 class="mt-4 text-3xl font-extrabold">{title}</h1>
+        <hr />
+      </div>
+      <div class="prose dark:prose-invert mt-6 w-full">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BasePage>

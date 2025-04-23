@@ -1,0 +1,31 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ExternalIconLinks from "./ExternalIconLinks.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header
+  class="bg-slate-200 py-4 shadow-md shadow-slate-300 dark:bg-slate-900 dark:shadow-slate-950"
+>
+  <!-- TODO: Change on `md` to drop down -->
+  <nav
+    class="flex flex-col content-center justify-between px-2 md:mx-auto md:w-3xl md:flex-row"
+  >
+    <a
+      class="my-auto flex-1 text-lg font-extrabold hover:text-shadow-blue-200 hover:text-shadow-lg dark:hover:text-shadow-blue-700/80"
+      href="/">{SITE_TITLE}</a
+    >
+    <div class="my-6 flex flex-col gap-4 md:my-auto md:flex-row">
+      <HeaderLink href="/">Home</HeaderLink>
+      <!-- <HeaderLink class="inline-block text-lg" href="/publications" -->
+      <!--   >Publications</HeaderLink -->
+      <!-- > -->
+      <!-- <HeaderLink class="inline-block text-lg" href="/talks">Talks</HeaderLink> -->
+      <!-- <HeaderLink class="inline-block text-lg" href="/service" -->
+      <!--   >Service</HeaderLink -->
+      <!-- > -->
+      <HeaderLink href="/blog">Blog</HeaderLink>
+    </div>
+    <ExternalIconLinks class="flex-1 md:justify-end" />
+  </nav>
+</header>
