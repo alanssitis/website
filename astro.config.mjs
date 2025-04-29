@@ -9,6 +9,11 @@ export default defineConfig({
   site: "https://alan.chung-ma.com",
   integrations: [mdx(), sitemap()],
   vite: {
+    server: {
+      watch: {
+        ignored: /(^|[\/\\])\../, // ignore dotfiles
+      },
+    },
     plugins: [tailwindcss()],
   },
 });
