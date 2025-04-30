@@ -15,7 +15,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <BasePage title=`Blog | ${SITE_TITLE}` description={BLOG_DESCRIPTION}>
-  <div class="mb-8 flex flex-row content-center">
+  <div class="mb-8 flex w-md max-w-full flex-row content-center md:w-full">
     <h1 class="grow text-3xl font-extrabold">{BLOG_TITLE}</h1>
     <a class="group" href="/blog/feed.xml" target="_blank">
       <svg viewBox="0 0 8 8" width="36" height="36">
