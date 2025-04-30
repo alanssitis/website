@@ -43,42 +43,43 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       {
         posts.map((post, x) => (
           <li class:list={[{ "md:col-span-2": !x }]}>
-            <a class="group rounded-lg p-4" href={`/blog/${post.id}/`}>
-              <div class="bg-theme-secondary/10 dark:bg-theme-dark-secondary/10 group-hover:bg-theme-secondary/20 dark:group-hover:bg-theme-dark-secondary/20 rounded-lg p-4 transition-colors duration-500">
-                {post.data.heroImage && images[post.data.heroImage] ? (
-                  <Image
-                    class:list={[
-                      "shadow-theme-secondary dark:shadow-theme-dark-secondary h-36 w-md rounded-md object-cover object-center shadow-sm transition-shadow duration-300 group-hover:shadow-lg md:w-full",
-                      { "md:h-72": !x },
-                    ]}
-                    src={images[post.data.heroImage]()}
-                    alt={post.data.heroImageAlt}
-                  />
-                ) : (
-                  <div
-                    class:list={[
-                      "h-36 w-md rounded-md bg-rose-200 md:w-full",
-                      { "md:h-72": !x },
-                    ]}
-                  />
-                )}
-                <h4
+            <a
+              class="group bg-theme-secondary/10 dark:bg-theme-dark-secondary/10 hover:bg-theme-secondary/20 dark:hover:bg-theme-dark-secondary/20 block w-md max-w-full rounded-lg p-4 transition-colors duration-500 md:w-full"
+              href={`/blog/${post.id}/`}
+            >
+              {post.data.heroImage && images[post.data.heroImage] ? (
+                <Image
                   class:list={[
-                    "mt-2 text-2xl font-semibold",
-                    { "md:text-center md:text-3xl": !x },
+                    "shadow-theme-secondary dark:shadow-theme-dark-secondary h-36 rounded-md object-cover object-center shadow-sm transition-shadow duration-300 group-hover:shadow-lg md:w-full",
+                    { "md:h-72": !x },
                   ]}
-                >
-                  {post.data.title}
-                </h4>
-                <p
+                  src={images[post.data.heroImage]()}
+                  alt={post.data.heroImageAlt}
+                />
+              ) : (
+                <div
                   class:list={[
-                    "text-black italic dark:text-white",
-                    { "md:text-center": !x },
+                    "h-36 w-md rounded-md bg-rose-200 md:w-full",
+                    { "md:h-72": !x },
                   ]}
-                >
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-              </div>
+                />
+              )}
+              <h4
+                class:list={[
+                  "mt-2 text-2xl font-semibold",
+                  { "md:text-center md:text-3xl": !x },
+                ]}
+              >
+                {post.data.title}
+              </h4>
+              <p
+                class:list={[
+                  "text-black italic dark:text-white",
+                  { "md:text-center": !x },
+                ]}
+              >
+                <FormattedDate date={post.data.pubDate} />
+              </p>
             </a>
           </li>
         ))
