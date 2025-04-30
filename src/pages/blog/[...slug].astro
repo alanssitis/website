@@ -53,7 +53,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         <h1 class="mt-4 mb-2 text-3xl font-extrabold">{title}</h1>
         <hr />
       </div>
-      <div class="prose dark:prose-invert mt-6 w-full">
+      <div class="prose dark:prose-invert mt-6 w-full max-w-none">
         <Content />
       </div>
     </div>
