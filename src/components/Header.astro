@@ -11,10 +11,12 @@ import { SITE_TITLE } from "../consts";
   <nav
     class="flex flex-col content-center justify-between px-2 md:mx-auto md:w-3xl md:flex-row"
   >
-    <a
-      class="hover:text-shadow-theme-primary/30 dark:hover:text-shadow-theme-dark-primary/30 my-auto flex-1 text-lg font-extrabold hover:text-shadow-lg"
-      href="/">{SITE_TITLE}</a
-    >
+    <div class="flex-1 md:my-auto">
+      <a
+        class="hover:text-shadow-theme-primary/30 dark:hover:text-shadow-theme-dark-primary/30 my-auto text-lg font-extrabold hover:text-shadow-lg"
+        href="/">{SITE_TITLE}</a
+      >
+    </div>
     <div class="my-6 flex flex-col gap-4 md:my-auto md:flex-row">
       <HeaderLink href="/">Home</HeaderLink>
       <!-- <HeaderLink class="inline-block text-lg" href="/publications" -->
