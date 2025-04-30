@@ -1,2 +1,15 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-theme-text: #09201e;
+  --color-theme-background: #effaf9;
+  --color-theme-primary: #237171;
+  --color-theme-secondary: #819cd9;
+  --color-theme-accent: #3141a5;
+  --color-theme-dark-text: #dff6f4;
+  --color-theme-dark-background: #05100f;
+  --color-theme-dark-primary: #8edcdc;
+  --color-theme-dark-secondary: #26407e;
+  --color-theme-dark-accent: #5a69ce;
+}

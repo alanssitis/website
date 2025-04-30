@@ -22,7 +22,9 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body class="flex min-h-screen flex-col dark:bg-slate-800 dark:text-white">
+  <body
+    class="bg-theme-background text-theme-text dark:bg-theme-dark-background dark:text-theme-dark-text flex min-h-screen flex-col"
+  >
     <Header />
     <main class="grow px-2 py-10 md:mx-auto md:w-3xl">
       <slot />
