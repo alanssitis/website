@@ -42,7 +42,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     <ul class="grid grid-cols-1 md:grid-cols-2">
       {
         posts.map((post, x) => (
-          <li class:list={["", { "md:col-span-2": x === 0 }]}>
+          <li class:list={[{ "md:col-span-2": !x }]}>
             <a class="group rounded-lg p-4" href={`/blog/${post.id}/`}>
               <div class="bg-theme-secondary/10 dark:bg-theme-dark-secondary/10 group-hover:bg-theme-secondary/20 dark:group-hover:bg-theme-dark-secondary/20 rounded-lg p-4 transition-colors duration-500">
                 {post.data.heroImage && images[post.data.heroImage] ? (
@@ -64,9 +64,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 )}
                 <h4
                   class:list={[
-                    "mt-2 text-2xl",
-                    { "font-semibold": x },
-                    { "text-center text-3xl font-bold": !x },
+                    "mt-2 text-2xl font-semibold",
+                    { "md:text-center md:text-3xl": !x },
                   ]}
                 >
                   {post.data.title}
@@ -74,7 +73,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 <p
                   class:list={[
                     "text-black italic dark:text-white",
-                    { "text-center": !x },
+                    { "md:text-center": !x },
                   ]}
                 >
                   <FormattedDate date={post.data.pubDate} />
