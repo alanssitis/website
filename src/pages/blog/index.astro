@@ -3,9 +3,14 @@ import BasePage from "../../layouts/BasePage.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import { SITE_TITLE, BLOG_TITLE, BLOG_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/blog/*.{jpeg,jpg,png,gif}",
 );
 ---
 
@@ -40,13 +45,13 @@ const posts = (await getCollection("blog")).sort(
           <li class:list={["", { "md:col-span-2": x === 0 }]}>
             <a class="group rounded-lg p-4" href={`/blog/${post.id}/`}>
               <div class="bg-theme-secondary/10 dark:bg-theme-dark-secondary/10 group-hover:bg-theme-secondary/20 dark:group-hover:bg-theme-dark-secondary/20 rounded-lg p-4 transition-colors duration-500">
-                {post.data.heroImage ? (
-                  <img
+                {post.data.heroImage && images[post.data.heroImage] ? (
+                  <Image
                     class:list={[
                       "shadow-theme-secondary dark:shadow-theme-dark-secondary h-36 w-md rounded-md object-cover object-center shadow-sm transition-shadow duration-300 group-hover:shadow-lg md:w-full",
                       { "md:h-72": !x },
                     ]}
-                    src={post.data.heroImage}
+                    src={images[post.data.heroImage]()}
                     alt={post.data.heroImageAlt}
                   />
                 ) : (

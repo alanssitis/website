@@ -1,11 +1,13 @@
 ---
 import BasePage from "../layouts/BasePage.astro";
+import { Image } from "astro:assets";
+import alanImage from "../assets/alan.jpeg";
 ---
 
 <BasePage>
-  <img
+  <Image
     class="shadow-theme-primary dark:shadow-theme-dark-primary mx-auto mb-8 w-md rounded-xl object-contain shadow-lg"
-    src="/alan.jpeg"
+    src={alanImage}
     alt="Picture of Alan by marble railing in the NY Public Library."
   />
   <h2 class="pb-4 text-xl font-semibold">Howdy!</h2>
