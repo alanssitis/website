@@ -1,8 +1,55 @@
 ---
+import { getCollection } from "astro:content";
+import { SITE_TITLE } from "../consts";
 import BasePage from "../layouts/BasePage.astro";
+
+const serviceList = (await getCollection("service")).sort(
+  (a, b) => a.data.orderIdx - b.data.orderIdx,
+);
 ---
 
-<BasePage>
+<BasePage title=`Service | ${SITE_TITLE}`>
   <h1 class="text-3xl font-extrabold">Service</h1>
-  <p class="pt-4 text-lg">I have yet to slave for the peer review system :)</p>
+  {
+    serviceList.map((service) => (
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold">{service.data.title}</h2>
+        <p class="my-2 italic">{service.data.description}</p>
+        <ul class="list-disc pl-8">
+          {service.data.entries
+            .sort((a, b) => {
+              if (a.title < b.title) {
+                return -1;
+              }
+              if (a.title > b.title) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((entry) => (
+              <li class="my-3">
+                <div class="w-full">
+                  <h3 class="text-lg font-semibold">
+                    {entry.titleLink ? (
+                      <a
+                        class="underline hover:decoration-2"
+                        href={entry.titleLink}
+                        target="_blank"
+                      >
+                        {entry.title}
+                      </a>
+                    ) : (
+                      entry.title
+                    )}
+                  </h3>
+                  {entry.subtitle && (
+                    <p class="font-light italic">{entry.subtitle}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+        </ul>
+      </div>
+    ))
+  }
 </BasePage>

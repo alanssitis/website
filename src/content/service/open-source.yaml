@@ -1,0 +1,13 @@
+title: Open Source
+description: >-
+  I am a big believer in the power of open source and try to contribute to
+  the tools and projects I use. Here is a list of the projects where I consider
+  myself to be a part of the community.
+orderIdx: 0
+entries:
+  - title: gittuf
+    subtitle: A security layer for Git repositories
+    titleLink: https://gittuf.dev/
+  - title: in-toto
+    subtitle: A framework to protect software supply chain integrity
+    titleLink: https://in-toto.io/

@@ -19,11 +19,27 @@ const blog = defineCollection({
   }),
 });
 
+const service = defineCollection({
+  loader: glob({
+    base: "./src/content/service",
+    pattern: '**/*.yaml',
+  }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    orderIdx: z.number(),
+    entries: z.array(z.object({
+      title: z.string(),
+      subtitle: z.string().optional(),
+      titleLink: z.string().url().optional(),
+    })),
+  }),
+})
+
 const talks = defineCollection({
   loader: glob({
     base: "./src/content/talks",
     pattern: '**/*.yaml',
-    generateId: ({ entry }) => entry.replace(/\.yaml/, ''),
   }),
   schema: z.object({
     title: z.string(),
@@ -40,4 +56,4 @@ const talks = defineCollection({
   }),
 });
 
-export const collections = { blog, talks };
+export const collections = { blog, service, talks };
