@@ -1,10 +1,66 @@
 ---
+import { getCollection } from "astro:content";
 import BasePage from "../layouts/BasePage.astro";
+import { SITE_TITLE } from "../consts";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const talks = (await getCollection("talks")).sort(
+  (a, b) => a.data.orderIdx - b.data.orderIdx,
+);
 ---
 
-<BasePage>
+<BasePage title=`Talks | ${SITE_TITLE}`>
   <h1 class="text-3xl font-extrabold">Talks</h1>
-  <p class="pt-4 text-lg">
-    I have some talks out there, not happy with them enough to put them here :P
-  </p>
+  {
+    talks.map((talk) => (
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold">{talk.data.title}</h2>
+        <p class="my-2 italic">{talk.data.description}</p>
+        <ul>
+          {talk.data.talks
+            .sort((a, b) => b.date.valueOf() - a.date.valueOf())
+            .map((t, y) => (
+              <li class="my-3 flex flex-row">
+                <p class="w-18 pr-2 text-right font-mono text-lg">
+                  [{talk.data.talks.length - y}]
+                </p>
+                <div class="w-full">
+                  <h3 class="text-lg font-semibold">
+                    {t.talkLink ? (
+                      <a
+                        class="underline hover:decoration-2"
+                        href={t.talkLink}
+                        target="_blank"
+                      >
+                        {t.title}
+                      </a>
+                    ) : (
+                      t.title
+                    )}
+                  </h3>
+                  <div class="flex flex-row">
+                    <FormattedDate date={t.date} />
+                    <p class="pl-2 font-light italic">
+                      {t.cospeakers && `with ${t.cospeakers.join(", ")}`}
+                      {t.venue && "at"}
+                      {t.venue && t.venueLink ? (
+                        <a
+                          class="underline hover:decoration-2"
+                          href={t.venueLink}
+                          target="_blank"
+                        >
+                          {t.venue}
+                        </a>
+                      ) : (
+                        t.venue
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+        </ul>
+      </div>
+    ))
+  }
 </BasePage>

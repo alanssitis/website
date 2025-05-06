@@ -19,4 +19,25 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const talks = defineCollection({
+  loader: glob({
+    base: "./src/content/talks",
+    pattern: '**/*.yaml',
+    generateId: ({ entry }) => entry.replace(/\.yaml/, ''),
+  }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    orderIdx: z.number(),
+    talks: z.array(z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      cospeakers: z.array(z.string()).optional(),
+      venue: z.string().optional(),
+      venueLink: z.string().url().optional(),
+      talkLink: z.string().url().optional(),
+    })),
+  }),
+});
+
+export const collections = { blog, talks };

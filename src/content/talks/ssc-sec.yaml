@@ -1,0 +1,19 @@
+title: Software Supply Chain Security
+description: >
+  I have contributed to the software supply chain security community since
+  my second year at Purdue. I work closely with folks from Purdue's TSEL and
+  NYU SSL labs and sometimes have the awesome opportunity to give talks.
+orderIdx: 0
+talks:
+  - title: Attesting and Verifying Your Software Supply-Chain with in-toto
+    date: April 2 2025
+    cospeakers: ["Justin Cappos"]
+    venue: KubeCon + CloudNativeCon Europe 2025
+    venueLink: https://kccnceu2025.sched.com/
+    talkLink: https://www.youtube.com/watch?v=Cydz0hadVuQ
+  - title: Enforceable Software Supply Chain Policies and Attestations using in-toto
+    date: March 20 2024
+    cospeakers: ["Santiago Torres-Arias"]
+    venue: KubeCon + CloudNativeCon Europe 2024
+    venueLink: https://kccnceu2024.sched.com/
+    talkLink: https://www.youtube.com/watch?v=WET21YrUqM0

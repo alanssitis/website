@@ -7,7 +7,6 @@ import { SITE_TITLE } from "../consts";
 <header
   class="dark:border-theme-dark-text/15 border-theme-text/15 border-b-1 py-3"
 >
-  <!-- TODO: Change on `md` to drop down -->
   <nav
     class="flex flex-col content-center justify-between px-2 md:mx-auto md:w-3xl md:flex-row"
   >
@@ -19,15 +18,11 @@ import { SITE_TITLE } from "../consts";
     </div>
     <div class="my-6 flex flex-col gap-4 md:my-auto md:flex-row">
       <HeaderLink href="/">Home</HeaderLink>
-      <!-- <HeaderLink class="inline-block text-lg" href="/publications" -->
-      <!--   >Publications</HeaderLink -->
-      <!-- > -->
-      <!-- <HeaderLink class="inline-block text-lg" href="/talks">Talks</HeaderLink> -->
-      <!-- <HeaderLink class="inline-block text-lg" href="/service" -->
-      <!--   >Service</HeaderLink -->
-      <!-- > -->
+      <!-- <HeaderLink href="/publications">Publications</HeaderLink> -->
+      <HeaderLink href="/talks">Talks</HeaderLink>
+      <HeaderLink href="/service">Service</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
     </div>
-    <ExternalIconLinks class="flex-1 md:justify-end" />
+    <ExternalIconLinks class="flex-1 my-2 md:my-auto md:justify-end" />
   </nav>
 </header>
