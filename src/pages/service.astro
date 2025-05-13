@@ -27,25 +27,23 @@ const serviceList = (await getCollection("service")).sort(
               return 0;
             })
             .map((entry) => (
-              <li class="my-3">
-                <div class="w-full">
-                  <h3 class="text-lg font-semibold">
-                    {entry.titleLink ? (
-                      <a
-                        class="underline hover:decoration-2"
-                        href={entry.titleLink}
-                        target="_blank"
-                      >
-                        {entry.title}
-                      </a>
-                    ) : (
-                      entry.title
-                    )}
-                  </h3>
-                  {entry.subtitle && (
-                    <p class="font-light italic">{entry.subtitle}</p>
+              <li class="my-3 w-full">
+                <h3 class="text-lg font-semibold">
+                  {entry.titleLink ? (
+                    <a
+                      class="underline hover:decoration-2"
+                      href={entry.titleLink}
+                      target="_blank"
+                    >
+                      {entry.title}
+                    </a>
+                  ) : (
+                    entry.title
                   )}
-                </div>
+                </h3>
+                {entry.subtitle && (
+                  <p class="font-light italic">{entry.subtitle}</p>
+                )}
               </li>
             ))}
         </ul>

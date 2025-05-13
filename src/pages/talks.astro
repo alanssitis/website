@@ -16,50 +16,43 @@ const talks = (await getCollection("talks")).sort(
       <div class="mt-8">
         <h2 class="text-2xl font-bold">{talk.data.title}</h2>
         <p class="my-2 italic">{talk.data.description}</p>
-        <ul>
+        <ol class="list-disc pl-4 md:list-decimal md:pl-8" reversed>
           {talk.data.talks
             .sort((a, b) => b.date.valueOf() - a.date.valueOf())
-            .map((t, y) => (
-              <li class="my-3 flex flex-row">
-                <p class="w-14 pr-2 text-right font-mono text-lg md:w-18">
-                  [{talk.data.talks.length - y}]
+            .map((t) => (
+              <li class="my-3 w-full">
+                <h3 class="text-lg font-semibold">
+                  {t.talkLink ? (
+                    <a
+                      class="underline hover:decoration-2"
+                      href={t.talkLink}
+                      target="_blank"
+                    >
+                      {t.title}
+                    </a>
+                  ) : (
+                    t.title
+                  )}
+                </h3>
+                <p class="font-light italic">
+                  <FormattedDate class="font-normal not-italic" date={t.date} />
+                  {t.cospeakers && `with ${t.cospeakers.join(", ")}`}
+                  {t.venue && "at"}
+                  {t.venue && t.venueLink ? (
+                    <a
+                      class="underline hover:decoration-2"
+                      href={t.venueLink}
+                      target="_blank"
+                    >
+                      {t.venue}
+                    </a>
+                  ) : (
+                    t.venue
+                  )}
                 </p>
-                <div class="w-full">
-                  <h3 class="text-lg font-semibold">
-                    {t.talkLink ? (
-                      <a
-                        class="underline hover:decoration-2"
-                        href={t.talkLink}
-                        target="_blank"
-                      >
-                        {t.title}
-                      </a>
-                    ) : (
-                      t.title
-                    )}
-                  </h3>
-                  <div class="flex flex-row">
-                    <FormattedDate date={t.date} />
-                    <p class="pl-2 font-light italic">
-                      {t.cospeakers && `with ${t.cospeakers.join(", ")}`}
-                      {t.venue && "at"}
-                      {t.venue && t.venueLink ? (
-                        <a
-                          class="underline hover:decoration-2"
-                          href={t.venueLink}
-                          target="_blank"
-                        >
-                          {t.venue}
-                        </a>
-                      ) : (
-                        t.venue
-                      )}
-                    </p>
-                  </div>
-                </div>
               </li>
             ))}
-        </ul>
+        </ol>
       </div>
     ))
   }
