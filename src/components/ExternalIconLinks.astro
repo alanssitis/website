@@ -3,11 +3,7 @@ const { class: className, ...props } = Astro.props;
 ---
 
 <div class:list={[className, "flex flex-row gap-4"]} {...props}>
-  <a
-    class="group"
-    href="https://bsky.app/profile/alan.chung-ma.com"
-    target="_blank"
-  >
+  <a class="group" href="https://bsky.app/profile/alan.chung-ma.com">
     <svg viewBox="9.5 9.5 36 36" aria-hidden="true" width="32" height="32"
       ><path
         class="fill-theme-text dark:fill-theme-dark-text transition-colors group-hover:fill-[#1185fe]"
@@ -15,7 +11,7 @@ const { class: className, ...props } = Astro.props;
       ></path></svg
     >
   </a>
-  <a class="group" href="https://github.com/alanssitis" target="_blank">
+  <a class="group" href="https://github.com/alanssitis">
     <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
       ><path
         class="fill-theme-text dark:fill-theme-dark-text transition-colors group-hover:fill-[#3e75c3]"

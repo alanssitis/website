@@ -23,11 +23,7 @@ const talks = (await getCollection("talks")).sort(
               <li class="my-3 w-full">
                 <h3 class="text-lg font-semibold">
                   {t.talkLink ? (
-                    <a
-                      class="underline hover:decoration-2"
-                      href={t.talkLink}
-                      target="_blank"
-                    >
+                    <a class="underline hover:decoration-2" href={t.talkLink}>
                       {t.title}
                     </a>
                   ) : (
@@ -39,11 +35,7 @@ const talks = (await getCollection("talks")).sort(
                   {t.cospeakers && `with ${t.cospeakers.join(", ")}`}
                   {t.venue && "at"}
                   {t.venue && t.venueLink ? (
-                    <a
-                      class="underline hover:decoration-2"
-                      href={t.venueLink}
-                      target="_blank"
-                    >
+                    <a class="underline hover:decoration-2" href={t.venueLink}>
                       {t.venue}
                     </a>
                   ) : (
