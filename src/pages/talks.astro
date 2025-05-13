@@ -21,7 +21,7 @@ const talks = (await getCollection("talks")).sort(
             .sort((a, b) => b.date.valueOf() - a.date.valueOf())
             .map((t, y) => (
               <li class="my-3 flex flex-row">
-                <p class="w-18 pr-2 text-right font-mono text-lg">
+                <p class="w-14 pr-2 text-right font-mono text-lg md:w-18">
                   [{talk.data.talks.length - y}]
                 </p>
                 <div class="w-full">
