@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE } from "../../consts";
+import { BLOG_TITLE } from "../../consts";
 import FormattedDate from "../../components/FormattedDate.astro";
 import BasePage from "../../layouts/BasePage.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
@@ -25,7 +25,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<BasePage title=`${title} | ${ SITE_TITLE }` description={description}>
+<BasePage title=`${title} | ${ BLOG_TITLE }` description={description}>
   <article>
     <div class="mb-4">
       {
@@ -50,7 +50,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             )
           }
         </div>
-        <h1 class="mt-4 mb-2 text-3xl font-extrabold">{title}</h1>
+        <h1 class="mt-4 mb-2 text-5xl font-extrabold">{title}</h1>
         <hr />
       </div>
       <div class="prose dark:prose-invert mt-6 w-full max-w-none">
