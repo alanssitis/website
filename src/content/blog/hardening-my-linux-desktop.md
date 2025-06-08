@@ -3,7 +3,7 @@ title: "Hardening My Linux Desktop"
 description: >
     A collection of notes and a brief walkthrough on how I went about to
     harden a new desktop computer running Arch Linux.
-pubDate: "June 6 2025"
+pubDate: "June 8 2025"
 heroImage: "/src/assets/blog/hardening-my-linux-desktop.jpeg"
 heroImageAlt: "A herd of cows sitting on a grassy hill."
 ---
@@ -127,7 +127,7 @@ the author of `sbctl`, is also a member of the Arch security team. The plugin
 system for pacman is much better and I no longer need to manually make sure
 that the EFI images are signed.
 
-## locking down BIOS
+## Locking down BIOS
 
 Secure boot woud not be effective if you can just plugin a USB and boot into
 it. Therefore, one other thing I did was to lock the BIOS behind a password.
