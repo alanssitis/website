@@ -1,8 +1,9 @@
 title: Software Supply Chain Security
 description: >-
   I have contributed to the software supply chain security community since
-  my second year at Purdue. I work closely with folks from Purdue's TSEL and
-  NYU SSL labs and sometimes have the awesome opportunity to give talks.
+  my second year at Purdue (2021). I work closely with folks from Purdue's
+  TSEL and NYU SSL labs and sometimes have the awesome opportunity to give
+  talks.
 orderIdx: 0
 talks:
   - title: Attesting and Verifying Your Software Supply-Chain with in-toto
