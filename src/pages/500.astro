@@ -1,7 +1,14 @@
 ---
 import BasePage from "../layouts/BasePage.astro";
+
+let text = "Ermmm... How?";
+switch (Astro.currentLocale) {
+  case "es":
+    text = "Ermmm... ¿Cómo?";
+    break;
+}
 ---
 
 <BasePage>
-  <h1>Ermmm... How?</h1>
+  <h1>{text}</h1>
 </BasePage>

@@ -6,10 +6,17 @@ import BasePage from "../layouts/BasePage.astro";
 const serviceList = (await getCollection("service")).sort(
   (a, b) => a.data.orderIdx - b.data.orderIdx,
 );
+
+let title = "Service";
+switch (Astro.currentLocale) {
+  case "es":
+    title = "Servicio";
+    break;
+}
 ---
 
-<BasePage title=`Service | ${SITE_TITLE}`>
-  <h1 class="text-3xl font-extrabold">Service</h1>
+<BasePage title=`${title} | ${SITE_TITLE}`>
+  <h1 class="text-3xl font-extrabold">{title}</h1>
   {
     serviceList.map((service) => (
       <div class="mt-8">

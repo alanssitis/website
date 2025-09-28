@@ -7,10 +7,21 @@ import FormattedDate from "../components/FormattedDate.astro";
 const talks = (await getCollection("talks")).sort(
   (a, b) => a.data.orderIdx - b.data.orderIdx,
 );
+
+let title = "Talks";
+let _with = "with";
+let _at = "at";
+switch (Astro.currentLocale) {
+  case "es":
+    title = "Platicas";
+    _with = "con";
+    _at = "en";
+    break;
+}
 ---
 
-<BasePage title=`Talks | ${SITE_TITLE}`>
-  <h1 class="text-3xl font-extrabold">Talks</h1>
+<BasePage title=`${title} | ${SITE_TITLE}`>
+  <h1 class="text-3xl font-extrabold">{title}</h1>
   {
     talks.map((talk) => (
       <div class="mt-8">
@@ -32,8 +43,8 @@ const talks = (await getCollection("talks")).sort(
                 </h3>
                 <p class="font-light italic">
                   <FormattedDate class="font-normal not-italic" date={t.date} />
-                  {t.cospeakers && `with ${t.cospeakers.join(", ")}`}
-                  {t.venue && "at"}
+                  {t.cospeakers && `${_with} ${t.cospeakers.join(", ")}`}
+                  {t.venue && _at}
                   {t.venue && t.venueLink ? (
                     <a class="underline hover:decoration-2" href={t.venueLink}>
                       {t.venue}

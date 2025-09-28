@@ -2,6 +2,13 @@
 import ExternalIconLinks from "./ExternalIconLinks.astro";
 
 const today = new Date();
+
+let rightsReservedText = "All rights reserved";
+switch (Astro.currentLocale) {
+  case "es":
+    rightsReservedText = "Todos los derechos reservados";
+    break;
+}
 ---
 
 <footer
@@ -9,7 +16,7 @@ const today = new Date();
 >
   <div class="px-2 md:mx-auto md:w-3xl">
     <h4 class="mb-8 text-center">
-      &copy; {today.getFullYear()} Alan Chung Ma. All rights reserved.
+      &copy; {today.getFullYear()} Alan Chung Ma. {rightsReservedText}.
     </h4>
     <ExternalIconLinks class="justify-center" />
   </div>

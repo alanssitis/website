@@ -1,0 +1,29 @@
+---
+import BasePage from "./BasePage.astro";
+import { Image } from "astro:assets";
+import alanImage from "../assets/alan.jpeg";
+
+let imageAlt;
+
+switch (Astro.currentLocale) {
+  case "es":
+    imageAlt =
+      "Alan sonriendo a la cámara en la Biblioteca Pública de Nueva York";
+    break;
+  case "en":
+  default:
+    imageAlt = "Alan smiling at the camera in the New York Public Library";
+    break;
+}
+---
+
+<BasePage>
+  <Image
+    class="shadow-theme-primary dark:shadow-theme-dark-primary mx-auto mb-8 w-2xs rounded-xl object-contain shadow-lg md:float-right md:mr-2 md:mb-4 md:ml-4"
+    src={alanImage}
+    alt={imageAlt}
+  />
+  <div class="mb-6 *:mb-4 *:text-lg">
+    <slot />
+  </div>
+</BasePage>
