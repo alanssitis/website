@@ -4,8 +4,8 @@ description: >
     A collection of notes and a brief walkthrough on how I went about to
     harden a new desktop computer running Arch Linux.
 pubDate: "June 8 2025"
-heroImage: "/src/assets/blog/hardening-my-linux-desktop.jpeg"
-heroImageAlt: "A herd of cows sitting on a grassy hill."
+heroImage: "/src/assets/blog/2025-hardening-my-linux-desktop.jpeg"
+heroImageAlt: "A herd of cows sitting on a grassy hill in the mountains of Bavaria DE."
 ---
 
 As a computer nerd, one of the most exciting things is getting new technology

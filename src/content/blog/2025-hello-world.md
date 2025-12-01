@@ -2,7 +2,7 @@
 title: "Hello world"
 description: "The first post, hello, world."
 pubDate: "Apr 19 2025"
-heroImage: "/src/assets/blog/hello_world.jpeg"
+heroImage: "/src/assets/blog/2025-hello-world.jpeg"
 heroImageAlt: "Picture outside a cute restaurant near Monterey, CA USA"
 updatedDate: "Apr 28 2025"
 ---
