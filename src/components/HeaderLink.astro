@@ -1,15 +1,22 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
-const pathname = "/" + Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+let pathname = "/" + Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const hrefstr = href!.toString();
+
+const locale = Astro.currentLocale ?? "";
+if (locale && !pathname.startsWith(locale, 1)) {
+  pathname = getRelativeLocaleUrl(locale, pathname);
+}
 
 const isActive = hrefstr.includes("blog")
   ? pathname.startsWith(hrefstr)
-  : pathname === hrefstr;
+  : pathname == hrefstr;
 ---
 
 <a
