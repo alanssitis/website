@@ -1,8 +1,8 @@
 ---
 title: "Hardening My Linux Desktop"
 description: >
-    A collection of notes and a brief walkthrough on how I went about to
-    harden a new desktop computer running Arch Linux.
+  A collection of notes and a brief walkthrough on how I went about to
+  harden a new desktop computer running Arch Linux.
 pubDate: "June 8 2025"
 heroImage: "/src/assets/blog/2025-hardening-my-linux-desktop.jpeg"
 heroImageAlt: "A herd of cows sitting on a grassy hill in the mountains of Bavaria DE."
@@ -45,7 +45,7 @@ forgot to back up, I began hacking away.
 Early on in my Linux-hacking era, like most folks, I was distro-hopping to find
 what worked for me. I started with [Ubuntu](https://ubuntu.com/desktop) and
 its derivatives [Mint](https://linuxmint.com/) and
-[Pop!_OS](https://system76.com/pop/), briefly checked out [Debian](https://www.debian.org/),
+[Pop!\_OS](https://system76.com/pop/), briefly checked out [Debian](https://www.debian.org/),
 [NixOS](https://nixos.org/), and [CentOS](https://www.centos.org/), and finally
 ended up loving [Arch](https://archlinux.org/). Sidenote: _This was almost 4
 years ago so I probably missed some of the other distros I tried out and don't
@@ -80,7 +80,7 @@ things I changed with the LUKS enrollments:
 - Saved FIDO credentials did not have user verification enabled, I wanted to enable it
 - A password I entered in the LUKS config was used as a backup, so I added a recovery password
 - The home partition was encrypted with a password in the root partition, this
-is convenient but not so much if I wanted to mount it manually
+  is convenient but not so much if I wanted to mount it manually
 
 So, I used `systemd-cryptenroll` to re-do the FIDO credential for both
 partitions, added a recovery credential, and removed the password credential.
@@ -120,7 +120,7 @@ there), who also happens to be part of the [Arch Security Team](https://wiki.arc
 One of the neat things we learned was the boot chain process, and how it can
 be secured. Santiago introduced `sbctl`, and one of our assignments was to
 setup secure boot on a VM. After this learning experience. I set it up on my
-laptop, which was then running Pop!_OS.
+laptop, which was then running Pop!\_OS.
 
 This time, it was actually much simpler. [Morten Linderud](https://github.com/Foxboron),
 the author of `sbctl`, is also a member of the Arch security team. The plugin

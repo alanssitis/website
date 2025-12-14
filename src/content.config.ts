@@ -22,37 +22,41 @@ const blog = defineCollection({
 const service = defineCollection({
   loader: glob({
     base: "./src/content/service",
-    pattern: '**/*.yaml',
+    pattern: "**/*.yaml",
   }),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
     orderIdx: z.number(),
-    entries: z.array(z.object({
-      title: z.string(),
-      subtitle: z.string().optional(),
-      titleLink: z.string().url().optional(),
-    })),
+    entries: z.array(
+      z.object({
+        title: z.string(),
+        subtitle: z.string().optional(),
+        titleLink: z.string().url().optional(),
+      }),
+    ),
   }),
-})
+});
 
 const talks = defineCollection({
   loader: glob({
     base: "./src/content/talks",
-    pattern: '**/*.yaml',
+    pattern: "**/*.yaml",
   }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
     orderIdx: z.number(),
-    talks: z.array(z.object({
-      title: z.string(),
-      date: z.coerce.date(),
-      cospeakers: z.array(z.string()).optional(),
-      venue: z.string().optional(),
-      venueLink: z.string().url().optional(),
-      talkLink: z.string().url().optional(),
-    })),
+    talks: z.array(
+      z.object({
+        title: z.string(),
+        date: z.coerce.date(),
+        cospeakers: z.array(z.string()).optional(),
+        venue: z.string().optional(),
+        venueLink: z.string().url().optional(),
+        talkLink: z.string().url().optional(),
+      }),
+    ),
   }),
 });
 

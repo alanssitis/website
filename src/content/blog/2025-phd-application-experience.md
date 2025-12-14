@@ -1,9 +1,9 @@
 ---
 title: "My PhD Application Experience"
 description: >
-    A walkthrough of my experience applying to PhD programs in both the US
-    and in Europe. I go over lessons learned as I applied in two cycles, and
-    how I approached my interviews and decisions.
+  A walkthrough of my experience applying to PhD programs in both the US
+  and in Europe. I go over lessons learned as I applied in two cycles, and
+  how I approached my interviews and decisions.
 pubDate: "Dec 14 2025"
 heroImage: "/src/assets/blog/2025-phd-application-experience.jpeg"
 heroImageAlt: "Beautiful baseball game in Fenway Park between the Red Sox and the Dodgers in Boston, MA US"

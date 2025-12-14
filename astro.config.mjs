@@ -9,7 +9,7 @@ export default defineConfig({
   site: "https://alan.chung-ma.com",
   integrations: [mdx(), sitemap()],
   i18n: {
-    locales: ["en", "es" ],
+    locales: ["en", "es"],
     defaultLocale: "en",
     fallback: {
       es: "en",
