@@ -12,8 +12,14 @@ const linkHome = getRelativeLocaleUrl(locale, "/");
 const linkTalks = getRelativeLocaleUrl(locale, "/talks");
 const linkService = getRelativeLocaleUrl(locale, "/service");
 const linkBlog = getRelativeLocaleUrl(locale, "/blog");
+const linkMore = getRelativeLocaleUrl(locale, "/more");
 
-let titleHome, titlePublications, titleTalks, titleService, titleBlog;
+let titleHome,
+  titlePublications,
+  titleTalks,
+  titleService,
+  titleBlog,
+  titleMore;
 
 switch (locale) {
   case "es":
@@ -22,6 +28,7 @@ switch (locale) {
     titleTalks = "Platicas";
     titleService = "Servicio";
     titleBlog = "Blog";
+    titleMore = "Más";
     break;
   case "en":
   default:
@@ -30,6 +37,7 @@ switch (locale) {
     titleTalks = "Talks";
     titleService = "Service";
     titleBlog = "Blog";
+    titleMore = "More";
     break;
 }
 ---
@@ -65,18 +73,16 @@ switch (locale) {
     </div>
     <div
       id="pageLinks"
-      class="my-6 hidden flex-col gap-4 md:my-auto md:flex md:flex-row"
+      class="my-6 flex hidden flex-col gap-4 md:my-auto md:flex md:flex-row"
     >
       <HeaderLink href={linkHome}>{titleHome}</HeaderLink>
       <!-- <HeaderLink href={linkPublications}>{titlePublications}</HeaderLink> -->
       <HeaderLink href={linkTalks}>{titleTalks}</HeaderLink>
       <HeaderLink href={linkService}>{titleService}</HeaderLink>
       <HeaderLink href={linkBlog}>{titleBlog}</HeaderLink>
+      <HeaderLink href={linkMore}>{titleMore}</HeaderLink>
     </div>
-    <ExternalIconLinks
-      id="externalIcons"
-      class="my-2 hidden flex-1 md:my-auto md:flex md:justify-end"
-    />
+    <ExternalIconLinks id="externalIcons" class="my-2 hidden flex-1" />
   </nav>
 </header>
 

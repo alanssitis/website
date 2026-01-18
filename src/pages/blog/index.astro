@@ -41,13 +41,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       </svg>
     </a>
   </div>
-  <section>
+  <section class="">
     <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
       {
         posts.map((post, x) => (
           <li class:list={[{ "md:col-span-2": !x }]}>
             <a
-              class="group bg-theme-secondary/18 dark:bg-theme-dark-secondary/28 hover:bg-theme-secondary/40 dark:hover:bg-theme-dark-secondary/55 block w-md max-w-full rounded-xl p-4 transition-colors duration-500 md:w-full"
+              class="group bg-theme-secondary/18 dark:bg-theme-dark-secondary/28 hover:bg-theme-secondary/40 dark:hover:bg-theme-dark-secondary/55 mx-auto block w-md max-w-full rounded-xl p-4 transition-colors duration-500 md:w-full"
               href={getRelativeLocaleUrl(locale, `/blog/${post.id}/`)}
             >
               {post.data.heroImage && images[post.data.heroImage] ? (

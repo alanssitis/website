@@ -1,0 +1,60 @@
+---
+import { SITE_TITLE } from "../../consts";
+import BasePage from "../../layouts/BasePage.astro";
+import ContactEmailCispa from "../../components/ContactEmailCispa.astro";
+import ContactEmailPersonal from "../../components/ContactEmailPersonal.astro";
+import ContactSignal from "../../components/ContactSignal.astro";
+
+let title = "Más";
+---
+
+<BasePage title=`${title} | ${SITE_TITLE}`>
+  <h1 class="text-3xl font-extrabold">{title}</h1>
+  <div id="about" class="mt-8 *:mb-2">
+    <h1 class="text-2xl font-bold">Acerca de Mí</h1>
+    <p>
+      En diciembre de 2023, me gradué con los más altos honores en la
+      Licenciatura en Ingeniería Informatica en la Universidad de Purdue. Allí,
+      trabajé en proyectos de seguridad de la cadena de suministro de software
+      bajo la dirección de
+      <a class="underline hover:decoration-2" href="https://badhomb.re/"
+        >Santiago Torres-Arias</a
+      > y, en un momento dado, fui presidente de
+      <a
+        class="underline hover:decoration-2"
+        href="https://engineering.purdue.edu/AMP/"
+        >Autonomous Motorsports Purdue</a
+      >.
+    </p>
+    <p>
+      Antes de regresar al mundo académico, trabajé como ingeniero de software
+      en
+      <a class="underline hover:decoration-2" href="https://www.keytos.io/"
+        >Keytos</a
+      >, una startup que ofrece varios productos de PKI como servicio
+      (PKI-as-a-Service), donde desarrollé EZRADIUS, EZCMS y mantuve otros
+      servicios. También realicé dos prácticas en Google durante mis estudios en
+      Purdue.
+    </p>
+    <p>Mi CV está disponible a solicitud.</p>
+  </div>
+  <div id="contact" class="mt-6 *:mb-2">
+    <h2 class="text-2xl font-bold">Contáctame</h2>
+    <p>
+      Puedes contactarme a través de los siguientes métodos, en orden de
+      preferencia:
+    </p>
+    <ul class="list-inside list-disc">
+      <li><i>email</i>: <ContactEmailCispa /></li>
+      <li><i>email</i>: <ContactEmailPersonal /></li>
+      <li><i>signal</i>: <ContactSignal /></li>
+    </ul>
+  </div>
+  <div id="follow" class="mt-6 *:mb-2">
+    <h2 class="text-2xl font-bold">Sígueme</h2>
+    <p>
+      ¡Puedes ver mis ideas y proyectos en las redes sociales enlazadas en el
+      pie de página abajo!
+    </p>
+  </div>
+</BasePage>
