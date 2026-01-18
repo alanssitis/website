@@ -1,45 +1,21 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 
+import { useTranslations } from "../i18n/utils";
+
 import HeaderLink from "./HeaderLink.astro";
 import ExternalIconLinks from "./ExternalIconLinks.astro";
 import { SITE_TITLE } from "../consts";
 
+const t = useTranslations(Astro.currentLocale);
 const locale = Astro.currentLocale ?? "";
 
 const linkHome = getRelativeLocaleUrl(locale, "/");
+const linkAbout = getRelativeLocaleUrl(locale, "/about");
 // const linkPublications = getRelativeLocaleUrl(locale, "/publications");
 const linkTalks = getRelativeLocaleUrl(locale, "/talks");
 const linkService = getRelativeLocaleUrl(locale, "/service");
 const linkBlog = getRelativeLocaleUrl(locale, "/blog");
-const linkMore = getRelativeLocaleUrl(locale, "/more");
-
-let titleHome,
-  titlePublications,
-  titleTalks,
-  titleService,
-  titleBlog,
-  titleMore;
-
-switch (locale) {
-  case "es":
-    titleHome = "Hogar";
-    titlePublications = "Publicaciones";
-    titleTalks = "Platicas";
-    titleService = "Servicio";
-    titleBlog = "Blog";
-    titleMore = "Más";
-    break;
-  case "en":
-  default:
-    titleHome = "Home";
-    titlePublications = "Publications";
-    titleTalks = "Talks";
-    titleService = "Service";
-    titleBlog = "Blog";
-    titleMore = "More";
-    break;
-}
 ---
 
 <header
@@ -75,12 +51,12 @@ switch (locale) {
       id="pageLinks"
       class="my-6 flex hidden flex-col gap-4 md:my-auto md:flex md:flex-row"
     >
-      <HeaderLink href={linkHome}>{titleHome}</HeaderLink>
-      <!-- <HeaderLink href={linkPublications}>{titlePublications}</HeaderLink> -->
-      <HeaderLink href={linkTalks}>{titleTalks}</HeaderLink>
-      <HeaderLink href={linkService}>{titleService}</HeaderLink>
-      <HeaderLink href={linkBlog}>{titleBlog}</HeaderLink>
-      <HeaderLink href={linkMore}>{titleMore}</HeaderLink>
+      <HeaderLink href={linkHome}>{t("nav.home")}</HeaderLink>
+      <HeaderLink href={linkAbout}>{t("nav.about")}</HeaderLink>
+      <!-- <HeaderLink href={linkPublications}>{t("nav.publications")}</HeaderLink> -->
+      <HeaderLink href={linkTalks}>{t("nav.talks")}</HeaderLink>
+      <HeaderLink href={linkService}>{t("nav.service")}</HeaderLink>
+      <HeaderLink href={linkBlog}>{t("nav.blog")}</HeaderLink>
     </div>
     <ExternalIconLinks id="externalIcons" class="my-2 hidden flex-1" />
   </nav>
