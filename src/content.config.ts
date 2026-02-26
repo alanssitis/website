@@ -16,6 +16,7 @@ const blog = defineCollection({
       .string()
       .optional()
       .default("Alan forgot to add an image alt, please bother him."),
+    draft: z.boolean().optional(),
   }),
 });
 

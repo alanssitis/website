@@ -2,13 +2,13 @@
 import BasePage from "../../layouts/BasePage.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
 import { BLOG_TITLE, BLOG_DESCRIPTION } from "../../consts";
-import { getCollection } from "astro:content";
+import { getBlogs } from "../../content_helper";
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = Astro.currentLocale ?? "";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getBlogs()).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
