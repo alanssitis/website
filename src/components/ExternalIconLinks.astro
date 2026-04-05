@@ -3,7 +3,7 @@ const { class: className, ...props } = Astro.props;
 ---
 
 <div class:list={[className, "flex flex-row gap-4"]} {...props}>
-  <a class="group" href="mailto:alan.chung-ma@cispa.de">
+  <a class="group" href="mailto:alan.chung-ma@cispa.de" aria-label="Work email">
     <svg viewBox="0 0 512 512" aria-hidden="true" width="32" height="32"
       ><path
         class="fill-theme-text-lighter dark:fill-theme-dark-text group-hover:fill-theme-secondary transition-colors"
@@ -11,7 +11,11 @@ const { class: className, ...props } = Astro.props;
       ></path></svg
     >
   </a>
-  <a class="group" href="https://bsky.app/profile/alan.chung-ma.com/">
+  <a
+    class="group"
+    href="https://bsky.app/profile/alan.chung-ma.com/"
+    aria-label="Bluesky profile"
+  >
     <svg viewBox="9.5 9.5 36 36" aria-hidden="true" width="32" height="32"
       ><path
         class="fill-theme-text-lighter dark:fill-theme-dark-text transition-colors group-hover:fill-[#1185fe]"
@@ -19,7 +23,11 @@ const { class: className, ...props } = Astro.props;
       ></path></svg
     >
   </a>
-  <a class="group" href="https://tangled.org/alan.chung-ma.com/">
+  <a
+    class="group"
+    href="https://tangled.org/alan.chung-ma.com/"
+    aria-label="tangled profile"
+  >
     <svg viewBox="0 0 24.5 24" aria-hidden="true" width="32" height="32">
       <!-- style="fill:#ffffff;fill-opacity:1;stroke-width:0.111183;filter:url(#filter24)" -->
       <path
@@ -28,7 +36,11 @@ const { class: className, ...props } = Astro.props;
       ></path>
     </svg>
   </a>
-  <a class="group" href="https://github.com/alanssitis/">
+  <a
+    class="group"
+    href="https://github.com/alanssitis/"
+    aria-label="GitHub profile"
+  >
     <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
       ><path
         class="fill-theme-text-lighter dark:fill-theme-dark-text transition-colors group-hover:fill-[#c06eff]"
@@ -36,7 +48,11 @@ const { class: className, ...props } = Astro.props;
       ></path></svg
     >
   </a>
-  <a class="group" href="https://gitlab.com/alanssitis/">
+  <a
+    class="group"
+    href="https://gitlab.com/alanssitis/"
+    aria-label="GitLab profile"
+  >
     <svg viewBox="110 110 160 160" aria-hidden="true" width="32" height="32">
       <g id="LOGO">
         <g>
