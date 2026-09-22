@@ -1,10 +1,10 @@
 ---
 title: "Who is to blame?"
 description: >
-    The U.S. military almost acted on faulty intelligence from a chatbot, in
-    an operation that could have escalated into conflict with China. As LLMs
-    get embedded into more critical systems, figuring out who's to blame
-    when they fail is only getting harder.
+  The U.S. military almost acted on faulty intelligence from a chatbot, in
+  an operation that could have escalated into conflict with China. As LLMs
+  get embedded into more critical systems, figuring out who's to blame
+  when they fail is only getting harder.
 pubDate: "Sep 22 2026"
 heroImage: "/src/assets/blog/2026-who-is-to-blame.jpeg"
 heroImageAlt: "Picture out of the Google Moffett Place campus when I interned there in 2022."
@@ -45,7 +45,7 @@ tendencies used by such systems which has led to our
 Regardless to why, the required validation of the responses from LLMs is now
 often skipped. You see this in the code that people try to merge into
 open source projects, and, closer to my own experience as an academic,
-also in the assignment submissions by students for classes and even in 
+also in the assignment submissions by students for classes and even in
 [paper submissions to academic conferences](https://medium.com/@TmlrOrg/asking-authors-about-their-own-papers-3d2e04e5dee0).
 
 It may be easy to blame the humans that were in the loop that failed to
@@ -121,14 +121,16 @@ a warning of what impunity has afforded them.
 I believe we need to rethink how we treat and assign blame when these systems
 make mistakes and cause harm. However, if labs can train and serve these
 LLMs at large cost with impunity, while others deploy them with disregard to
-security, I fear that consequences may never fall on those that deserve it. 
+security, I fear that consequences may never fall on those that deserve it.
 Who do we blame had the U.S. carried out its operation against the Chinese
 vessel? To revisit the above analogy: even if we humans are behind the wheel of
 a fleet of cars, who do we blame if the fleet rams through the buildings to
 take us to our destination?
 
 [^1]: In an ideal world, this would be a godsend if it did more than just online paperwork, but unfortunately a lot is physical. German paperwork sometimes feels harder than research.
+
 [^2]: A simple search engine search would give you various examples from different companies.
 
 [^3]: U.S. military drone hitting a school in Iran, [Bloomber report](https://www.bloomberg.com/graphics/2026-iran-school-attack/) and further [New York Times analysis](https://www.nytimes.com/2026/09/17/world/asia/us-iran-school-strike-report.html).
+
 [^4]: U.S. strikes on boats around the Caribean and Pacific coasts off of Mexico and South America may be crimes against humanity, as [reported by the NYT](https://www.nytimes.com/2026/09/21/world/americas/us-boat-strikes-crimes-un.html).
