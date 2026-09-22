@@ -10,11 +10,12 @@
     "fmt": "prettier . --write"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/rss": "^4.0.14",
-    "@astrojs/sitemap": "^3.6.1",
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.9",
+    "astro": "^7.3.3",
+    "node-addon-api": "^8.9.2",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.18"
   },
