@@ -11,9 +11,6 @@ heroImage: "/src/assets/blog/2026-who-is-to-blame.jpeg"
 heroImageAlt: "Picture out of the Google Moffett Place campus when I interned there in 2022."
 ---
 
-_Note of edit:_ Minor changes to wording. You can see the changes made in
-the [repository of this website](https://github.com/alanssitis/website).
-
 _LLM disclosure: All the words and ideas were tought of and written by me. I
 used an LLM to help edit and clean up in the last rounds of editing.
 I am sympathetic to [Oxide's RFD on using LLMs as editors](https://rfd.shared.oxide.computer/rfd/0576#_llms_as_editors)._
@@ -120,9 +117,9 @@ information age, which started from the advent of transistors, has introduced
 algorithms that could act as oracles for human decisions. This has made it hard
 to determine who we could blame for bad decisions as these algorithms can hide
 behind the ruse of being impartial mathematics. Algorithms have allowed insurance
-companies, credit reporting companies, and social media companies to make
+companies, credit reporting companies, and social media companies make
 decisions in our lives autonomously at a large scale without providing a clear
-entity to blame for bad, and occasionally harmul decisions. The history of
+entity to blame for bad, and occasionally harmful decisions. The history of
 accountability for the harms caused by algorithms and the companies behind
 them has been a mixed record, often requiring
 [public reporting of long, systematic damages](https://www.propublica.org/article/cigna-pxdx-medical-health-insurance-rejection-claims).
