@@ -112,26 +112,30 @@ regardless of whether the responses provided by the systems were hallucinations
 or not [^3] [^4]. If mistakes occured, or if illegal actions were taken with
 some involvement of an LLM, it is not clear who is to blame.
 
-It does not really make sense to assign the blame to something that is a tool
-for those with power. Tools that are almost as good as humans, and even worse
+It also does not really make sense to assign the blame to something that is a
+tool for those with power, as it allows them to relinquish responsibility.
+Tools that are almost as good as humans, and even worse
 than humans, have been used to replace human labor for varying reasons. The
-information age, which started from the advent of computers, has introduced
+information age, which started from the advent of transistors, has introduced
 algorithms that could act as oracles for human decisions. This has made it hard
-to determine who we could blame for bad decisions. Algorithms have allowed insurance
+to determine who we could blame for bad decisions as these algorithms can hide
+behind the ruse of being impartial mathematics. Algorithms have allowed insurance
 companies, credit reporting companies, and social media companies to make
 decisions in our lives autonomously at a large scale without providing a clear
 entity to blame for bad, and occasionally harmul decisions. The history of
-accountability for the harms caused by the algorithms and the companies behind
-them has been a mixed record. This does not mean that we should just ignore the
-current developments. We should learn from them as they can serve as warning of
-what impunity can afford those that benefit from algorithms and ignores their
-harms.
+accountability for the harms caused by algorithms and the companies behind
+them has been a mixed record, often requiring
+[public reporting of long, systematic damages](https://www.propublica.org/article/cigna-pxdx-medical-health-insurance-rejection-claims).
+This does not mean that we should just ignore the current developments. We
+should learn from them as they can serve as warning of what impunity can afford
+those that benefit from algorithms and ignores their harms.
 
 I believe we need to rethink how we treat and assign blame when these systems
 make mistakes or cause harm. However, if labs can train and serve these
-LLMs at large cost to human society with impunity, while others deploy them
-with disregard to its effects, I fear that consequences may never fall on those
-that may deserve it, whomever _we_ decide it should be.
+LLMs at large cost to human society with [immunity](https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/),
+while others deploy them with disregard to its [effects](https://www.404media.co/ai-agent-platform-reinvents-spam-floods-inboxes-worldwide/),
+I fear that consequences may never fall on those that may deserve it, whomever
+_we_ decide it should be.
 Who do we blame had the U.S. carried out its operation against the Chinese
 vessel? To revisit the above analogy: even if we humans are behind the wheel of
 a fleet of cars, who do we blame if the fleet rams through the buildings to
