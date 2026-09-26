@@ -31,6 +31,8 @@ const {
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/blog/*.{jpeg,jpg,png,gif}",
 );
+const changesHref =
+  "https://github.com/alanssitis/website/commits/main/" + post.filePath;
 ---
 
 <BasePage title=`${title} | ${ BLOG_TITLE }` description={description}>
@@ -55,7 +57,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           {
             updatedDate && (
               <div>
-                Last updated on <FormattedDate date={updatedDate} />
+                Last updated on <FormattedDate date={updatedDate} /> (you can
+                track the changes made{" "}
+                <a class="underline hover:decoration-2" href={changesHref}>
+                  here
+                </a>
+                )
               </div>
             )
           }
