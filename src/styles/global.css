@@ -20,3 +20,7 @@
 .dark {
   color-scheme: dark;
 }
+
+@utility body-link {
+  @apply decoration-theme-primary/40 dark:decoration-theme-dark-primary/40 hover:decoration-theme-primary dark:hover:decoration-theme-dark-primary underline decoration-2 transition-colors;
+}
