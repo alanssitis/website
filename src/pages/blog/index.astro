@@ -18,8 +18,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 ---
 
 <BasePage title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
-  <div class="mb-8 flex w-md max-w-full flex-row content-center md:w-full">
-    <h1 class="pr-6 text-3xl font-extrabold md:grow">{BLOG_TITLE}</h1>
+  <div class="mb-8 flex flex-row items-center">
+    <h1 class="grow pr-6 text-3xl font-extrabold">{BLOG_TITLE}</h1>
     <a class="group" href="/blog/feed.xml">
       <svg viewBox="0 0 8 8" width="36" height="36">
         <rect
@@ -41,48 +41,34 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       </svg>
     </a>
   </div>
-  <section class="">
-    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+  <section>
+    <ul
+      class="divide-theme-text/15 dark:divide-theme-dark-text/15 border-theme-text/15 dark:border-theme-dark-text/15 divide-y border-y"
+    >
       {
-        posts.map((post, x) => (
-          <li class:list={[{ "md:col-span-2": !x }]}>
+        posts.map((post) => (
+          <li>
             <a
-              class="group bg-theme-secondary/18 dark:bg-theme-dark-secondary/28 hover:bg-theme-secondary/40 dark:hover:bg-theme-dark-secondary/55 mx-auto block w-md max-w-full rounded-xl p-4 transition-colors duration-500 md:w-full"
+              class="group flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:gap-4"
               href={getRelativeLocaleUrl(locale, `/blog/${post.id}/`)}
             >
-              {post.data.heroImage && images[post.data.heroImage] ? (
+              <div class="grow">
+                <h2 class="group-hover:decoration-theme-primary dark:group-hover:decoration-theme-dark-primary text-xl font-semibold underline decoration-transparent decoration-4 transition-colors">
+                  {post.data.title}
+                </h2>
+                <p class="text-theme-text/70 dark:text-theme-dark-text/70 text-sm">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </div>
+              {post.data.heroImage && images[post.data.heroImage] && (
                 <Image
-                  class:list={[
-                    "h-36 rounded-sm object-cover object-center md:w-full",
-                    { "md:h-72": !x },
-                  ]}
+                  class="order-first aspect-5/2 w-full shrink-0 rounded-sm object-cover object-center sm:order-none sm:h-[8em] sm:w-[12em]"
                   src={images[post.data.heroImage]()}
                   alt={post.data.heroImageAlt}
-                />
-              ) : (
-                <div
-                  class:list={[
-                    "h-36 w-md rounded-md bg-rose-200 md:w-full",
-                    { "md:h-72": !x },
-                  ]}
+                  widths={[384, 768]}
+                  sizes="(min-width: 40rem) 12em, 100vw"
                 />
               )}
-              <h4
-                class:list={[
-                  "mt-2 text-2xl font-semibold",
-                  { "md:text-center md:text-3xl": !x },
-                ]}
-              >
-                {post.data.title}
-              </h4>
-              <p
-                class:list={[
-                  "text-black italic dark:text-white",
-                  { "md:text-center": !x },
-                ]}
-              >
-                <FormattedDate date={post.data.pubDate} />
-              </p>
             </a>
           </li>
         ))
