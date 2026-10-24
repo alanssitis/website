@@ -1,25 +1,22 @@
 ---
 import IndexPage from "../layouts/IndexPage.astro";
+import BodyLink from "../components/BodyLink.astro";
 import ContactEmailCispa from "../components/ContactEmailCispa.astro";
 ---
 
 <IndexPage>
   <h1 class="text-2xl font-bold">Howdy!</h1>
   <p>
-    I am a Master's student at <a
-      class="underline hover:decoration-2"
-      href="https://www.uni-saarland.de/start.html">Saarland University</a
-    > under the support of <a
-      class="underline hover:decoration-2"
+    I am a Master's student at <BodyLink
+      href="https://www.uni-saarland.de/start.html"
+      >Saarland University</BodyLink
+    > under the support of <BodyLink
       href="https://cispa.de/en/career/excellence-program"
-      >CISPA's Excellence Program for Master's Students</a
-    > co-advised by <a
-      class="underline hover:decoration-2"
-      href="https://wouterlueks.nl/">Wouter Lueks</a
-    > and <a
-      class="underline hover:decoration-2"
-      href="https://ssasy.github.io/">Sajin Sasy</a
-    >. I plan to stay at CISPA to pursue a PhD.
+      >CISPA's Excellence Program for Master's Students</BodyLink
+    > co-advised by <BodyLink href="https://wouterlueks.nl/"
+      >Wouter Lueks</BodyLink
+    > and <BodyLink href="https://ssasy.github.io/">Sajin Sasy</BodyLink>. I
+    plan to stay at CISPA to pursue a PhD.
   </p><p>
     I seek to develop practical solutions to problems that require better
     security and privacy guarantees where existing solutions do not suffice.

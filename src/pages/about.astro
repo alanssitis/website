@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from "../consts";
 import BasePage from "../layouts/BasePage.astro";
+import BodyLink from "../components/BodyLink.astro";
 import ContactEmailCispa from "../components/ContactEmailCispa.astro";
 import ContactEmailPersonal from "../components/ContactEmailPersonal.astro";
 import ContactSignal from "../components/ContactSignal.astro";
@@ -14,23 +15,19 @@ let title = "About";
     <h2 class="text-2xl font-bold">About Me</h2>
     <p>
       In December 2023, I earned a Bachelor's in Computer Engineering with the
-      Highest Distinction from <a
-        class="underline hover:decoration-2"
-        href="https://www.purdue.edu/">Purdue University</a
-      >. There, I worked on
-      software-supply-chain security projects under the guidance of <a
-        class="underline hover:decoration-2"
-        href="https://badhomb.re/">Santiago Torres-Arias</a
-      > and was also, at one point, the President of <a
-        class="underline hover:decoration-2"
+      Highest Distinction from <BodyLink href="https://www.purdue.edu/"
+        >Purdue University</BodyLink
+      >. There, I worked on software-supply-chain security projects under the
+      guidance of <BodyLink href="https://badhomb.re/"
+        >Santiago Torres-Arias</BodyLink
+      > and was also, at one point, the President of <BodyLink
         href="https://engineering.purdue.edu/AMP/"
-        >Autonomous Motorsports Purdue</a
+        >Autonomous Motorsports Purdue</BodyLink
       >.
     </p>
     <p>
-      Prior to rejoining academia, I was a software engineer at <a
-        class="underline hover:decoration-2"
-        href="https://www.keytos.io/">Keytos</a
+      Prior to rejoining academia, I was a software engineer at <BodyLink
+        href="https://www.keytos.io/">Keytos</BodyLink
       >, a startup offering various in-house PKI-as-a-Service products, where I
       built EZRADIUS, EZCMS, and maintained other services. I have also
       previously interned at Google on two occasions during my studies at
@@ -38,17 +35,12 @@ let title = "About";
     </p>
     <p>
       I am currently a Master's student at Saarland University under the support
-      of <a
-        class="underline hover:decoration-2"
-        href="https://cispa.de/en/career/excellence-program"
-        >CISPA's Excellence Program for Master's Students</a
-      > co-advised by <a
-        class="underline hover:decoration-2"
-        href="https://wouterlueks.nl/">Wouter Lueks</a
-      > and <a
-        class="underline hover:decoration-2"
-        href="https://ssasy.github.io/">Sajin Sasy</a
-      >. I plan to stay at CISPA to pursue a PhD.
+      of <BodyLink href="https://cispa.de/en/career/excellence-program"
+        >CISPA's Excellence Program for Master's Students</BodyLink
+      > co-advised by <BodyLink href="https://wouterlueks.nl/"
+        >Wouter Lueks</BodyLink
+      > and <BodyLink href="https://ssasy.github.io/">Sajin Sasy</BodyLink>. I
+      plan to stay at CISPA to pursue a PhD.
     </p>
     <p>My CV is available upon request.</p>
   </div>

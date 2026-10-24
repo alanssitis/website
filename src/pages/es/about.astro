@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from "../../consts";
 import BasePage from "../../layouts/BasePage.astro";
+import BodyLink from "../../components/BodyLink.astro";
 import ContactEmailCispa from "../../components/ContactEmailCispa.astro";
 import ContactEmailPersonal from "../../components/ContactEmailPersonal.astro";
 import ContactSignal from "../../components/ContactSignal.astro";
@@ -14,43 +15,32 @@ let title = "Acerca de";
     <h1 class="text-2xl font-bold">Acerca de Mí</h1>
     <p>
       En diciembre de 2023, me gradué con los más altos honores en la
-      Licenciatura en Ingeniería Informatica en la <a
-        class="underline hover:decoration-2"
-        href="https://www.purdue.edu/">Universidad de Purdue</a
-      >. Allí,
-      trabajé en proyectos de seguridad de la cadena de suministro de software
-      bajo la dirección de <a
-        class="underline hover:decoration-2"
-        href="https://badhomb.re/">Santiago Torres-Arias</a
-      > y, en un momento dado, fui presidente de <a
-        class="underline hover:decoration-2"
+      Licenciatura en Ingeniería Informatica en la <BodyLink
+        href="https://www.purdue.edu/">Universidad de Purdue</BodyLink
+      >. Allí, trabajé en proyectos de seguridad de la cadena de suministro de
+      software bajo la dirección de <BodyLink href="https://badhomb.re/"
+        >Santiago Torres-Arias</BodyLink
+      > y, en un momento dado, fui presidente de <BodyLink
         href="https://engineering.purdue.edu/AMP/"
-        >Autonomous Motorsports Purdue</a
+        >Autonomous Motorsports Purdue</BodyLink
       >.
     </p>
     <p>
       Antes de regresar al mundo académico, trabajé como ingeniero de software
-      en <a class="underline hover:decoration-2" href="https://www.keytos.io/"
-        >Keytos</a
-      >, una startup que ofrece varios productos de PKI como servicio
-      (PKI-as-a-Service), donde desarrollé EZRADIUS, EZCMS y mantuve otros
-      servicios. También realicé dos prácticas en Google durante mis estudios en
-      Purdue.
+      en <BodyLink href="https://www.keytos.io/">Keytos</BodyLink>, una startup
+      que ofrece varios productos de PKI como servicio (PKI-as-a-Service), donde
+      desarrollé EZRADIUS, EZCMS y mantuve otros servicios. También realicé dos
+      prácticas en Google durante mis estudios en Purdue.
     </p>
     <p>
       Presentemente, soy estudiante de maestría en la Universidad del Sarre, con
       el apoyo del
-      <a
-        class="underline hover:decoration-2"
-        href="https://cispa.de/en/career/excellence-program"
-        >Programa de Excelencia para Estudiantes de Maestría de CISPA</a
-      >, codirigido por <a
-        class="underline hover:decoration-2"
-        href="https://wouterlueks.nl/">Wouter Lueks</a
-      > y <a
-        class="underline hover:decoration-2"
-        href="https://ssasy.github.io/">Sajin Sasy</a
-      >. Planeo continuar en CISPA para obtener un doctorado.
+      <BodyLink href="https://cispa.de/en/career/excellence-program"
+        >Programa de Excelencia para Estudiantes de Maestría de CISPA</BodyLink
+      >, codirigido por <BodyLink href="https://wouterlueks.nl/"
+        >Wouter Lueks</BodyLink
+      > y <BodyLink href="https://ssasy.github.io/">Sajin Sasy</BodyLink>.
+      Planeo continuar en CISPA para obtener un doctorado.
     </p>
     <p>Mi CV está disponible a solicitud.</p>
   </div>

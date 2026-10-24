@@ -1,25 +1,22 @@
 ---
 import IndexPage from "../../layouts/IndexPage.astro";
+import BodyLink from "../../components/BodyLink.astro";
 import ContactEmailCispa from "../../components/ContactEmailCispa.astro";
 ---
 
 <IndexPage>
   <h1 class="text-2xl font-bold">¡Buenas!</h1>
   <p>
-    Soy estudiante de maestría en la <a
-      class="underline hover:decoration-2"
-      href="https://www.uni-saarland.de/start.html">Universidad del Sarre</a
+    Soy estudiante de maestría en la <BodyLink
+      href="https://www.uni-saarland.de/start.html"
+      >Universidad del Sarre</BodyLink
     >, con el apoyo del
-    <a
-      class="underline hover:decoration-2"
-      href="https://cispa.de/en/career/excellence-program"
-      >Programa de Excelencia para Estudiantes de Maestría de CISPA</a
-    >, codirigido por <a
-      class="underline hover:decoration-2"
-      href="https://wouterlueks.nl/">Wouter Lueks</a
-    > y <a class="underline hover:decoration-2" href="https://ssasy.github.io/"
-      >Sajin Sasy</a
-    >. Planeo continuar en CISPA para obtener un doctorado.
+    <BodyLink href="https://cispa.de/en/career/excellence-program"
+      >Programa de Excelencia para Estudiantes de Maestría de CISPA</BodyLink
+    >, codirigido por <BodyLink href="https://wouterlueks.nl/"
+      >Wouter Lueks</BodyLink
+    > y <BodyLink href="https://ssasy.github.io/">Sajin Sasy</BodyLink>. Planeo
+    continuar en CISPA para obtener un doctorado.
   </p><p>
     Busco desarrollar soluciones prácticas para problemas que requieren mejores
     garantías de seguridad y privacidad.
