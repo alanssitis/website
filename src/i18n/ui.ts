@@ -8,6 +8,7 @@ export const ui = {
     "nav.talks": "Talks",
     "nav.service": "Service",
     "nav.blog": "Blog",
+    "theme.toggle": "Toggle dark mode",
   },
   es: {
     "nav.home": "Hogar",
@@ -15,5 +16,6 @@ export const ui = {
     "nav.publications": "Publicaciones",
     "nav.talks": "Platicas",
     "nav.service": "Servicio",
+    "theme.toggle": "Cambiar modo oscuro",
   },
 } as const;

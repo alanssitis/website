@@ -6,6 +6,8 @@ import { useTranslations } from "../i18n/utils";
 import HeaderLink from "./HeaderLink.astro";
 import ExternalIconLinks from "./ExternalIconLinks.astro";
 import { SITE_TITLE } from "../consts";
+import DarkModeIcon from "../assets/icons/dark_mode.svg";
+import LightModeIcon from "../assets/icons/light_mode.svg";
 
 const t = useTranslations(Astro.currentLocale);
 const locale = Astro.currentLocale ?? "";
@@ -22,15 +24,33 @@ const linkBlog = getRelativeLocaleUrl(locale, "/blog");
   class="dark:border-theme-dark-text/15 border-theme-text/15 border-b py-3"
 >
   <nav
-    class="flex flex-col content-center justify-between px-2 md:mx-auto md:w-3xl md:flex-row"
+    class="flex flex-col content-center justify-between px-2 md:mx-auto md:w-3xl md:flex-row md:items-center"
   >
-    <div class="flex flex-1 items-center md:my-auto">
+    <div class="flex flex-1 items-center md:contents">
       <a
-        class="hover:text-shadow-theme-accent/20 dark:hover:text-shadow-theme-dark-accent/75 my-auto text-lg font-extrabold hover:text-shadow-lg"
+        class="hover:text-shadow-theme-accent/20 dark:hover:text-shadow-theme-dark-accent/75 my-auto text-lg font-extrabold hover:text-shadow-lg md:mr-auto"
         href={linkHome}>{SITE_TITLE}</a
       >
       <button
-        class="group mr-2 flex-1 cursor-pointer md:hidden"
+        class="group ml-auto cursor-pointer md:order-last md:ml-6"
+        aria-label={t("theme.toggle")}
+        theme-toggle
+      >
+        <DarkModeIcon
+          class="fill-theme-text dark:fill-theme-dark-text dark:group-hover:fill-theme-dark-accent group-hover:fill-theme-accent transition-colors dark:hidden"
+          width={22}
+          height={22}
+          aria-hidden="true"
+        />
+        <LightModeIcon
+          class="fill-theme-text dark:fill-theme-dark-text dark:group-hover:fill-theme-dark-accent group-hover:fill-theme-accent hidden transition-colors dark:block"
+          width={22}
+          height={22}
+          aria-hidden="true"
+        />
+      </button>
+      <button
+        class="group mr-2 ml-4 cursor-pointer md:hidden"
         aria-label="Mobile menu drop-down toggle"
         drop-down-toggle
       >
@@ -78,5 +98,22 @@ const linkBlog = getRelativeLocaleUrl(locale, "/blog");
       : "m280-400 200-200.67L680-400H280Z";
     showDropdown = !showDropdown;
     document.getElementById("dropdownToggleIcon")?.setAttribute("d", iconPath);
+  });
+
+  const themeToggle = document.querySelector("[theme-toggle]");
+  themeToggle?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    try {
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    } catch {}
+  });
+
+  // Follow the system theme until the visitor picks one explicitly
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    let saved = null;
+    try {
+      saved = localStorage.getItem("theme");
+    } catch {}
+    if (!saved) document.documentElement.classList.toggle("dark", e.matches);
   });
 </script>

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-theme-text-lighter: #13423e;
   --color-theme-text: #09201e;
@@ -13,4 +15,8 @@
   --color-theme-dark-primary: #8edcdc;
   --color-theme-dark-secondary: #26407e;
   --color-theme-dark-accent: #5a69ce;
+}
+
+.dark {
+  color-scheme: dark;
 }
