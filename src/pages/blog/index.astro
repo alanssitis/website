@@ -53,7 +53,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               {post.data.heroImage && images[post.data.heroImage] ? (
                 <Image
                   class:list={[
-                    "shadow-theme-secondary dark:shadow-theme-dark-secondary h-36 rounded-md object-cover object-center shadow-sm transition-shadow duration-300 group-hover:shadow-lg md:w-full",
+                    "h-36 rounded-sm object-cover object-center md:w-full",
                     { "md:h-72": !x },
                   ]}
                   src={images[post.data.heroImage]()}
